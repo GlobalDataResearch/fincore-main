@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FinCore - Bookkeeping Services for Startups & Tech Companies</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#007a78',secondary:'#007a78'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+}
+.hero-gradient {
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0) 100%);
+}
+.service-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.faq-answer-0, .faq-answer-1, .faq-answer-2, .faq-answer-3, .faq-answer-4, .faq-answer-5, .faq-answer-6, .faq-answer-7, .faq-answer-8, .faq-answer-9 {
+transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.faq-icon-0, .faq-icon-1, .faq-icon-2, .faq-icon-3, .faq-icon-4, .faq-icon-5, .faq-icon-6, .faq-icon-7, .faq-icon-8, .faq-icon-9 {
+transition: transform 0.3s ease;
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Header Navigation -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<a href="#" class="flex items-center">
+<span class="text-3xl font-['Pacifico'] text-primary">FinCore</span>
+</a>
+<nav class="hidden md:flex space-x-8">
+<a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d" data-readdy="true" class="text-gray-700 hover:text-primary font-medium">Home</a>
+<a href="#services" class="text-gray-700 hover:text-primary font-medium" data-readdy="true">Services</a>
+<a href="#pricing" class="text-gray-700 hover:text-primary font-medium" data-readdy="true">Pricing</a>
+<a href="#testimonials" class="text-gray-700 hover:text-primary font-medium">Testimonials</a>
+<a href="https://" class="text-gray-700 hover:text-primary font-medium" data-readdy="true">FAQ</a>
+<a href="#contact" class="text-gray-700 hover:text-primary font-medium">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<a href="#contact" class="hidden md:block bg-primary text-white px-5 py-2 !rounded-button whitespace-nowrap hover:opacity-90 transition-all">Get Started</a>
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" onclick="toggleMobileMenu()">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full z-50">
+<div class="container mx-auto px-4 py-3">
+<nav class="flex flex-col space-y-4">
+<a href="#" class="text-gray-700 hover:text-primary font-medium py-2" onclick="toggleMobileMenu()">Home</a>
+<a href="#services" class="text-gray-700 hover:text-primary font-medium py-2" onclick="toggleMobileMenu()">Services</a>
+<a href="#pricing" class="text-gray-700 hover:text-primary font-medium py-2" onclick="toggleMobileMenu()">Pricing</a>
+<a href="#testimonials" class="text-gray-700 hover:text-primary font-medium py-2" onclick="toggleMobileMenu()">Testimonials</a>
+<a href="#faq" class="text-gray-700 hover:text-primary font-medium py-2" onclick="toggleMobileMenu()">FAQ</a>
+<a href="#contact" class="text-gray-700 hover:text-primary font-medium py-2" onclick="toggleMobileMenu()">Contact</a>
+<a href="#contact" class="bg-primary text-white px-5 py-2 !rounded-button whitespace-nowrap hover:opacity-90 transition-all text-center mt-2" onclick="toggleMobileMenu()">Get Started</a>
+</nav>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img src="https://public.readdy.ai/ai/img_res/193b1df0f783408dea60074431139a6d.jpg" alt="Tech Startup Bookkeeping Hero" class="w-full h-full object-cover object-top">
+</div>
+<div class="relative z-10 hero-gradient w-full h-full">
+<div class="container mx-auto px-4 py-24 md:py-32">
+<div class="max-w-2xl">
+<span class="inline-block bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm font-medium mb-4">100% Canadian Owned & Operated</span>
+<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Specialized Payroll & Bookkeeping Services for Startups & Tech Companies</h1>
+<p class="text-lg text-gray-700 mb-8">At FinCore, we understand the unique financial challenges of tech startups. Our specialized bookkeeping services help you manage burn rate, investor reporting, and R&D tax credits with fixed pricing and no surprise costs.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="#contact" class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:opacity-90 transition-all text-center font-medium">Get Started Today</a>
+<a href="#pricing" class="border border-gray-300 bg-white text-gray-700 px-6 py-3 !rounded-button whitespace-nowrap hover:bg-gray-50 transition-all text-center font-medium">View Pricing</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Badges -->
+<section class="bg-white py-8 border-b border-gray-100">
+<div class="container mx-auto px-4">
+<div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center text-primary bg-primary p-0.5 rounded-full">
+<div class="w-full h-full rounded-full bg-white flex items-center justify-center">
+<i class="ri-shield-check-line ri-2x text-primary"></i>
+</div>
+</div>
+<span class="ml-2 text-gray-700 font-medium">100% Canadian</span>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center text-primary bg-primary p-0.5 rounded-full">
+<div class="w-full h-full rounded-full bg-white flex items-center justify-center">
+<i class="ri-price-tag-3-line ri-2x text-primary"></i>
+</div>
+</div>
+<span class="ml-2 text-gray-700 font-medium">Fixed Pricing</span>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center text-primary bg-primary p-0.5 rounded-full">
+<div class="w-full h-full rounded-full bg-white flex items-center justify-center">
+<i class="ri-customer-service-2-line ri-2x text-primary"></i>
+</div>
+</div>
+<span class="ml-2 text-gray-700 font-medium">Dedicated Support</span>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center text-primary bg-primary p-0.5 rounded-full">
+<div class="w-full h-full rounded-full bg-white flex items-center justify-center">
+<i class="ri-secure-payment-line ri-2x text-primary"></i>
+</div>
+</div>
+<span class="ml-2 text-gray-700 font-medium">Secure Systems</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section id="services" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Specialized Bookkeeping for Tech Startups</h2>
+<p class="text-lg text-gray-600">Our comprehensive financial services are designed specifically for the unique needs and challenges of technology startups and scale-ups.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Startup-Focused Bookkeeping -->
+<div class="bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all">
+<div class="w-14 h-14 flex items-center justify-center bg-indigo-100 rounded-full mb-6">
+<i class="ri-focus-3-line ri-lg text-indigo-600"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Startup-Focused Bookkeeping</h3>
+<p class="text-gray-600">Custom bookkeeping tailored to early-stage and high-growth startups. We understand the unique financial challenges of tech companies and provide specialized services to support your growth journey from seed to Series funding.</p>
+</div>
+<!-- Custom Chart of Accounts for Startups -->
+<div class="bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all">
+<div class="w-14 h-14 flex items-center justify-center bg-indigo-100 rounded-full mb-6">
+<i class="ri-pie-chart-line ri-lg text-indigo-600"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Custom Chart of Accounts for Startups</h3>
+<p class="text-gray-600">Track spending across R&D, marketing, operations, etc., tailored to startup KPIs. Our custom chart of accounts provides detailed visibility into your financial data, making it easier to monitor burn rate, prepare for investor meetings, and identify cost-saving opportunities.</p>
+</div>
+<!-- Free Onboarding & Quick Setup -->
+<div class="bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all">
+<div class="w-14 h-14 flex items-center justify-center bg-indigo-100 rounded-full mb-6">
+<i class="ri-rocket-line ri-lg text-indigo-600"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Free Onboarding & Quick Setup</h3>
+<p class="text-gray-600">Hassle-free onboarding with first-month setup included. We'll configure your accounting software, integrate with your existing tools, and establish efficient workflows to get your financial systems up and running quickly with minimal disruption to your business operations.</p>
+</div>
+<!-- MRR Reporting -->
+<div class="bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all">
+<div class="w-14 h-14 flex items-center justify-center bg-indigo-100 rounded-full mb-6">
+<i class="ri-line-chart-line ri-lg text-indigo-600"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">MRR Reporting</h3>
+<p class="text-gray-600">Track and analyze your Monthly Recurring Revenue with detailed reports that highlight growth trends, churn rates, and expansion revenue.</p>
+</div>
+<!-- Deferred Revenue Management -->
+<div class="bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all">
+<div class="w-14 h-14 flex items-center justify-center bg-indigo-100 rounded-full mb-6">
+<i class="ri-calendar-check-line ri-lg text-indigo-600"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Deferred Revenue Management</h3>
+<p class="text-gray-600">Properly recognize revenue over time for subscription-based models, ensuring compliance with accounting standards and accurate financial statements.</p>
+</div>
+<!-- Fundraising Preparation -->
+<div class="bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all">
+<div class="w-14 h-14 flex items-center justify-center bg-indigo-100 rounded-full mb-6">
+<i class="ri-award-line ri-lg text-indigo-600"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Fundraising Preparation</h3>
+<p class="text-gray-600">Get your books investor-ready with clean financial statements, detailed projections, and metrics that matter to VCs and angel investors.</p>
+</div>
+<!-- Audit Ready Books -->
+<div class="bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all">
+<div class="w-14 h-14 flex items-center justify-center bg-indigo-100 rounded-full mb-6">
+<i class="ri-file-list-3-line ri-lg text-indigo-600"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Audit / Tax Ready Books</h3>
+<p class="text-gray-600">Maintain impeccable financial records that can withstand scrutiny from auditors, investors, and regulatory bodies, with proper documentation and controls.</p>
+</div>
+<!-- AR/AP Management -->
+<div class="bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all">
+<div class="w-14 h-14 flex items-center justify-center bg-indigo-100 rounded-full mb-6">
+<i class="ri-exchange-dollar-line ri-lg text-indigo-600"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">AR/AP Management</h3>
+<p class="text-gray-600">Streamline your accounts receivable and payable processes with automated invoicing, payment tracking, and aging reports to optimize cash flow.</p>
+</div>
+<!-- Cash Flow Management -->
+<div class="bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all">
+<div class="w-14 h-14 flex items-center justify-center bg-indigo-100 rounded-full mb-6">
+<i class="ri-funds-box-line ri-lg text-indigo-600"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Cash Flow Management</h3>
+<p class="text-gray-600">Monitor and forecast your cash position with precision, identifying potential shortfalls before they happen and optimizing your runway.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us Section -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center max-w-3xl mx-auto mb-12">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Why Tech Startups Choose Our Bookkeeping Services</h2>
+<p class="text-lg text-gray-600">We understand the unique challenges of tech startups and provide tailored solutions to support your growth journey.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Tech Industry Expertise -->
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<div class="w-16 h-16 flex items-center justify-center bg-indigo-100 rounded-full mb-6">
+<i class="ri-code-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Tech Industry Expertise</h3>
+<p class="text-gray-600">Our team has specialized knowledge of SaaS, subscription models, and tech industry accounting standards and metrics.</p>
+</div>
+<!-- Cloud-Based Systems -->
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<div class="w-16 h-16 flex items-center justify-center bg-indigo-100 rounded-full mb-6">
+<i class="ri-cloud-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Cloud-Based Systems</h3>
+<p class="text-gray-600">We leverage modern cloud accounting tools that integrate with your tech stack for seamless financial management.</p>
+</div>
+<!-- Scale-Ready Systems -->
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<div class="w-16 h-16 flex items-center justify-center bg-indigo-100 rounded-full mb-6">
+<i class="ri-rocket-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Scale-Ready Systems</h3>
+<p class="text-gray-600">Our processes are designed to grow with you, from seed stage through Series funding and beyond.</p>
+</div>
+<!-- Metrics That Matter -->
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<div class="w-16 h-16 flex items-center justify-center bg-indigo-100 rounded-full mb-6">
+<i class="ri-bar-chart-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Metrics That Matter</h3>
+<p class="text-gray-600">We track and report on the specific KPIs that tech investors and stakeholders care about most.</p>
+</div>
+<!-- Dedicated Team -->
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<div class="w-16 h-16 flex items-center justify-center bg-indigo-100 rounded-full mb-6">
+<i class="ri-team-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Dedicated Team</h3>
+<p class="text-gray-600">Work with bookkeepers who understand tech business models and can provide strategic financial insights.</p>
+</div>
+<!-- Investor-Ready Financials -->
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<div class="w-16 h-16 flex items-center justify-center bg-indigo-100 rounded-full mb-6">
+<i class="ri-presentation-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Investor-Ready Financials</h3>
+<p class="text-gray-600">We prepare your books to withstand investor due diligence and support your fundraising efforts.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section id="pricing" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Startup-Friendly Pricing</h2>
+<p class="text-lg text-gray-600">Choose the plan that fits your startup's stage. All plans include our tech-focused bookkeeping services with transparent pricing that scales with you.</p>
+</div>
+<!-- Pricing Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+<!-- Seed Stage Plan -->
+<div class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all overflow-hidden">
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Seed Stage</h3>
+<div class="flex items-baseline mb-4">
+<span class="text-3xl font-bold text-primary">$399</span>
+<span class="text-gray-500 ml-1">/month</span>
+</div>
+<p class="text-gray-600 mb-6">Perfect for early-stage startups focused on product development.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Monthly bookkeeping</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Burn rate tracking</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Financial statements</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Bank reconciliation</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Revenue less than 500k</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Basic investor reporting</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Dedicated bookkeeper</span>
+</li>
+</ul>
+</div>
+<div class="px-6 pb-6">
+<a href="#contact" class="block w-full bg-white border border-primary text-primary text-center px-6 py-3 !rounded-button whitespace-nowrap hover:bg-primary hover:text-white transition-all font-medium">Get Started</a>
+</div>
+</div>
+<!-- Growth Stage Plan (Popular) -->
+<div class="bg-white border-2 border-primary rounded-lg shadow-md hover:shadow-lg transition-all relative overflow-hidden">
+<div class="absolute top-0 right-0">
+<div class="bg-primary text-white px-4 py-1 transform rotate-45 translate-x-6 -translate-y-1">
+<span class="text-xs font-medium">POPULAR</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Growth Stage</h3>
+<div class="flex items-baseline mb-4">
+<span class="text-3xl font-bold text-primary">$699</span>
+<span class="text-gray-500 ml-1">/month</span>
+</div>
+<p class="text-gray-600 mb-6">Ideal for funded startups scaling operations and team.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Everything in Seed Stage</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Unlimited transactions</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Revenue less than 2 Million</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Dedicated Bookkeeper</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Monthly financial review call</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Priority email & phone support</span>
+</li>
+</ul>
+</div>
+<div class="px-6 pb-6">
+<a href="#contact" class="block w-full bg-primary text-white text-center px-6 py-3 !rounded-button whitespace-nowrap hover:opacity-90 transition-all font-medium">Get Started</a>
+</div>
+</div>
+<!-- Scale-Up Plan -->
+<div class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all overflow-hidden">
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Scale-Up</h3>
+<div class="flex items-baseline mb-4">
+<span class="text-3xl font-bold text-primary">$1,199</span>
+<span class="text-gray-500 ml-1">/month</span>
+</div>
+<p class="text-gray-600 mb-6">Comprehensive solution for later-stage startups with complex needs.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Everything in Growth Stage</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Unlimited transactions</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Multi-currency multiple accounts</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Revenue recognition for SaaS</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Investor ready financial statement</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Dedicated startup bookkeeper</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Quarterly business review</span>
+</li>
+</ul>
+</div>
+<div class="px-6 pb-6">
+<a href="#contact" class="block w-full bg-white border border-primary text-primary text-center px-6 py-3 !rounded-button whitespace-nowrap hover:bg-primary hover:text-white transition-all font-medium">Get Started</a>
+</div>
+</div>
+</div>
+<div class="mt-16 bg-gray-50 rounded-lg p-8">
+<h3 class="text-xl font-semibold text-gray-900 mb-6">Popular Add-on Services</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<div class="flex items-center bg-white p-4 rounded shadow-sm">
+<div class="w-10 h-10 flex items-center justify-center bg-primary p-0.5 rounded-full mr-4">
+<div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+<i class="ri-money-dollar-circle-line text-primary"></i>
+</div>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Payroll Services</h4>
+<p class="text-sm text-gray-600"></p>
+</div>
+</div>
+<div class="flex items-center bg-white p-4 rounded shadow-sm">
+<div class="w-10 h-10 flex items-center justify-center bg-primary p-0.5 rounded-full mr-4">
+<div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+<i class="ri-file-list-3-line text-primary"></i>
+</div>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Tax Filing</h4>
+<p class="text-sm text-gray-600"></p>
+</div>
+</div>
+<div class="flex items-center bg-white p-4 rounded shadow-sm">
+<div class="w-10 h-10 flex items-center justify-center bg-primary p-0.5 rounded-full mr-4">
+<div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+<i class="ri-government-line text-primary"></i>
+</div>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">GST / PST / QST Filing</h4>
+<p class="text-sm text-gray-600"></p>
+</div>
+</div>
+<div class="flex items-center bg-white p-4 rounded shadow-sm">
+<div class="w-10 h-10 flex items-center justify-center bg-primary p-0.5 rounded-full mr-4">
+<div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+<i class="ri-scales-3-line text-primary"></i>
+</div>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">409A Valuation</h4>
+<p class="text-sm text-gray-600"></p>
+</div>
+</div>
+<div class="flex items-center bg-white p-4 rounded shadow-sm">
+<div class="w-10 h-10 flex items-center justify-center bg-primary p-0.5 rounded-full mr-4">
+<div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+<i class="ri-line-chart-line text-primary"></i>
+</div>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">MRR Tracking & Reporting</h4>
+<p class="text-sm text-gray-600"></p>
+</div>
+</div>
+<div class="flex items-center bg-white p-4 rounded shadow-sm">
+<div class="w-10 h-10 flex items-center justify-center bg-primary p-0.5 rounded-full mr-4">
+<div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+<i class="ri-calendar-check-line text-primary"></i>
+</div>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Deferred Revenue Management</h4>
+<p class="text-sm text-gray-600"></p>
+</div>
+</div>
+<div class="flex items-center bg-white p-4 rounded shadow-sm">
+<div class="w-10 h-10 flex items-center justify-center bg-primary p-0.5 rounded-full mr-4">
+<div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+<i class="ri-exchange-dollar-line text-primary"></i>
+</div>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">AR / AP Management</h4>
+<p class="text-sm text-gray-600"></p>
+</div>
+</div>
+<div class="flex items-center bg-white p-4 rounded shadow-sm">
+<div class="w-10 h-10 flex items-center justify-center bg-primary p-0.5 rounded-full mr-4">
+<div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+<i class="ri-presentation-line text-primary"></i>
+</div>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Fundraising Preparation</h4>
+<p class="text-sm text-gray-600"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<div class="flex items-center justify-center mb-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3">
+<i class="ri-double-quotes-l ri-lg text-primary"></i>
+</div>
+<h2 class="text-3xl font-bold text-gray-900">What Tech Founders Say</h2>
+</div>
+<p class="text-lg text-gray-600">Don't just take our word for it. Here's what startup founders and tech executives have to say about our specialized bookkeeping services.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+<div class="flex items-center mb-4">
+<div>
+<div class="flex items-center mb-1">
+<div class="w-5 h-5 flex items-center justify-center bg-indigo-100 rounded-full mr-2">
+<i class="ri-verified-badge-line text-primary text-xs"></i>
+</div>
+<h4 class="font-semibold text-gray-900">Alex Rivera</h4>
+</div>
+<p class="text-sm text-gray-600">CEO, CloudStack Technologies</p>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-700 italic">"FinCore has been instrumental in our growth from seed to Series A. Their understanding of SaaS metrics and investor reporting helped us secure funding and make data-driven decisions about our expansion strategy."</p>
+</div>
+<div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+<div class="flex items-center mb-4">
+<div>
+<div class="flex items-center mb-1">
+<div class="w-5 h-5 flex items-center justify-center bg-indigo-100 rounded-full mr-2">
+<i class="ri-verified-badge-line text-primary text-xs"></i>
+</div>
+<h4 class="font-semibold text-gray-900">Emily Zhang</h4>
+</div>
+<p class="text-sm text-gray-600">Founder, FinTech Innovations</p>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-700 italic">"As a fintech founder, I needed bookkeepers who understand both finance and technology. FinCore exceeded my expectations with their expertise in subscription revenue models and their ability to create financial reports that impressed our investors."</p>
+</div>
+<div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+<div class="flex items-center mb-4">
+<div>
+<div class="flex items-center mb-1">
+<div class="w-5 h-5 flex items-center justify-center bg-indigo-100 rounded-full mr-2">
+<i class="ri-verified-badge-line text-primary text-xs"></i>
+</div>
+<h4 class="font-semibold text-gray-900">Jordan Taylor</h4>
+</div>
+<p class="text-sm text-gray-600">CTO, DevOps Solutions</p>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-700 italic">"FinCore helped us maximize our SR&ED tax credits, recovering over $200K that we reinvested in development. Their understanding of what qualifies as R&D from a tax perspective has been invaluable to our bottom line."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Ready to Scale Your Startup?</h2>
+<p class="text-lg text-gray-600 mb-6">Let us handle your financial operations so you can focus on product development and growth. Fill out the form and we'll get back to you within 24 hours.</p>
+<div class="flex items-center mb-6">
+<div class="w-10 h-10 flex items-center justify-center bg-primary rounded-full mr-4">
+<i class="ri-check-line text-white"></i>
+</div>
+<p class="text-gray-700">100% Canadian Owned & Operated</p>
+</div>
+<div class="space-y-6 mb-8">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary p-0.5 rounded-full mt-1">
+<div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+<i class="ri-mail-line ri-lg text-primary"></i>
+</div>
+</div>
+<div class="ml-4">
+<h4 class="font-medium text-gray-900">Email Us</h4>
+<p class="text-gray-600">sales@fincore.ca</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary p-0.5 rounded-full mt-1">
+<div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+<i class="ri-phone-line ri-lg text-primary"></i>
+</div>
+</div>
+<div class="ml-4">
+<h4 class="font-medium text-gray-900">Call Us</h4>
+<p class="text-gray-600">(604) 239-3350</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary p-0.5 rounded-full mt-1">
+<div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+<i class="ri-map-pin-line ri-lg text-primary"></i>
+</div>
+</div>
+<div class="ml-4">
+<h4 class="font-medium text-gray-900">Location</h4>
+<p class="text-gray-600">450 SW Marine Dr, Vancouver, BC, Canada</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+<form id="contactForm" onsubmit="event.preventDefault(); submitContactForm();">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div>
+<label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+<input type="text" id="firstName" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="John">
+</div>
+<div>
+<label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+<input type="text" id="lastName" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Smith">
+</div>
+</div>
+<div class="mb-6">
+<label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+<input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="john@example.com">
+</div>
+<div class="mb-6">
+<label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+<input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="(647) 555-1234">
+</div>
+<div class="mb-6">
+<label for="business" class="block text-sm font-medium text-gray-700 mb-1">Business Name</label>
+<input type="text" id="business" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Your Business Name">
+</div>
+<div class="mb-6">
+<label for="message" class="block text-sm font-medium text-gray-700 mb-1">How can we help?</label>
+<textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Tell us about your bookkeeping needs..."></textarea>
+</div>
+<button type="submit" class="w-full bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:opacity-90 transition-all font-medium">Send Message</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<!-- FAQ Section -->
+<section id="faq" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+<p class="text-lg text-gray-600">Get answers to common questions about our specialized bookkeeping services for tech startups.</p>
+</div>
+<div id="faq-container" class="max-w-3xl mx-auto">
+<!-- FAQ Item 1 -->
+<div class="border-b border-gray-200 py-4">
+<button class="w-full flex justify-between items-center text-left focus:outline-none" onclick="toggleFaq(0)">
+<h3 class="text-lg font-medium text-gray-900">What makes your bookkeeping service different for startups?</h3>
+<i class="ri-arrow-down-s-line faq-icon-0 text-primary transition-transform"></i>
+</button>
+<div class="faq-answer-0 hidden mt-2 text-gray-600 overflow-hidden transition-all"></div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="border-b border-gray-200 py-4">
+<button class="w-full flex justify-between items-center text-left focus:outline-none" onclick="toggleFaq(1)">
+<h3 class="text-lg font-medium text-gray-900">How much does it cost?</h3>
+<i class="ri-arrow-down-s-line faq-icon-1 text-primary transition-transform"></i>
+</button>
+<div class="faq-answer-1 hidden mt-2 text-gray-600 overflow-hidden transition-all"></div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="border-b border-gray-200 py-4">
+<button class="w-full flex justify-between items-center text-left focus:outline-none" onclick="toggleFaq(2)">
+<h3 class="text-lg font-medium text-gray-900">How fast can we get started?</h3>
+<i class="ri-arrow-down-s-line faq-icon-2 text-primary transition-transform"></i>
+</button>
+<div class="faq-answer-2 hidden mt-2 text-gray-600 overflow-hidden transition-all"></div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="border-b border-gray-200 py-4">
+<button class="w-full flex justify-between items-center text-left focus:outline-none" onclick="toggleFaq(3)">
+<h3 class="text-lg font-medium text-gray-900">Do you work with early-stage or pre-revenue startups?</h3>
+<i class="ri-arrow-down-s-line faq-icon-3 text-primary transition-transform"></i>
+</button>
+<div class="faq-answer-3 hidden mt-2 text-gray-600 overflow-hidden transition-all"></div>
+</div>
+<!-- FAQ Item 5 -->
+<div class="border-b border-gray-200 py-4">
+<button class="w-full flex justify-between items-center text-left focus:outline-none" onclick="toggleFaq(4)">
+<h3 class="text-lg font-medium text-gray-900">What software do you support?</h3>
+<i class="ri-arrow-down-s-line faq-icon-4 text-primary transition-transform"></i>
+</button>
+<div class="faq-answer-4 hidden mt-2 text-gray-600 overflow-hidden transition-all"></div>
+</div>
+<!-- FAQ Item 6 -->
+<div class="border-b border-gray-200 py-4">
+<button class="w-full flex justify-between items-center text-left focus:outline-none" onclick="toggleFaq(5)">
+<h3 class="text-lg font-medium text-gray-900">Can you help with tax filing or audits?</h3>
+<i class="ri-arrow-down-s-line faq-icon-5 text-primary transition-transform"></i>
+</button>
+<div class="faq-answer-5 hidden mt-2 text-gray-600 overflow-hidden transition-all"></div>
+</div>
+<!-- FAQ Item 7 -->
+<div class="border-b border-gray-200 py-4">
+<button class="w-full flex justify-between items-center text-left focus:outline-none" onclick="toggleFaq(6)">
+<h3 class="text-lg font-medium text-gray-900">Do I need to do anything if I hire your team?</h3>
+<i class="ri-arrow-down-s-line faq-icon-6 text-primary transition-transform"></i>
+</button>
+<div class="faq-answer-6 hidden mt-2 text-gray-600 overflow-hidden transition-all"></div>
+</div>
+<!-- FAQ Item 8 -->
+<div class="border-b border-gray-200 py-4">
+<button class="w-full flex justify-between items-center text-left focus:outline-none" onclick="toggleFaq(7)">
+<h3 class="text-lg font-medium text-gray-900">How do you handle revenue recognition for SaaS or recurring revenue models?</h3>
+<i class="ri-arrow-down-s-line faq-icon-7 text-primary transition-transform"></i>
+</button>
+<div class="faq-answer-7 hidden mt-2 text-gray-600 overflow-hidden transition-all"></div>
+</div>
+<!-- FAQ Item 9 -->
+<div class="border-b border-gray-200 py-4">
+<button class="w-full flex justify-between items-center text-left focus:outline-none" onclick="toggleFaq(8)">
+<h3 class="text-lg font-medium text-gray-900">Can you help us with investor or grant reporting?</h3>
+<i class="ri-arrow-down-s-line faq-icon-8 text-primary transition-transform"></i>
+</button>
+<div class="faq-answer-8 hidden mt-2 text-gray-600 overflow-hidden transition-all"></div>
+</div>
+<!-- FAQ Item 10 -->
+<div class="border-b border-gray-200 py-4">
+<button class="w-full flex justify-between items-center text-left focus:outline-none" onclick="toggleFaq(9)">
+<h3 class="text-lg font-medium text-gray-900">Is my financial data safe with you?</h3>
+<i class="ri-arrow-down-s-line faq-icon-9 text-primary transition-transform"></i>
+</button>
+<div class="faq-answer-9 hidden mt-2 text-gray-600 overflow-hidden transition-all"></div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- Column 1: Company Info -->
+<div>
+<div class="mb-4">
+<span class="text-3xl font-['Pacifico'] text-white">FinCore</span>
+</div>
+<p class="text-gray-400 mb-6">Specialized bookkeeping services for Canadian tech startups and scale-ups. We understand the unique financial needs of high-growth technology companies.</p>
+<div class="flex space-x-2 mb-4">
+<span class="bg-primary bg-opacity-20 text-primary px-2 py-0.5 rounded-full text-xs">Tech-Focused</span>
+<span class="bg-primary bg-opacity-20 text-primary px-2 py-0.5 rounded-full text-xs">Investor-Ready</span>
+<span class="bg-primary bg-opacity-20 text-primary px-2 py-0.5 rounded-full text-xs">Scalable</span>
+</div>
+<div class="space-y-2 mb-6">
+<div class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-mail-line"></i>
+</div>
+<span class="ml-2 text-gray-400">sales@fincore.ca</span>
+</div>
+<div class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-phone-line"></i>
+</div>
+<span class="ml-2 text-gray-400">(604) 239-3350</span>
+</div>
+</div>
+<div class="flex space-x-4">
+<a href="#contact" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-all">
+<i class="ri-facebook-fill text-white"></i>
+</a>
+<a href="#contact" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-all">
+<i class="ri-twitter-x-fill text-white"></i>
+</a>
+<a href="#contact" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-all">
+<i class="ri-linkedin-fill text-white"></i>
+</a>
+<a href="#contact" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-all">
+<i class="ri-instagram-fill text-white"></i>
+</a>
+</div>
+</div>
+<!-- Column 2: Services -->
+<div>
+<h3 class="text-lg font-semibold mb-6">Services</h3>
+<ul class="space-y-3">
+<li><a href="#services" class="text-gray-400 hover:text-white transition-all">Startup-Focused Bookkeeping</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-white transition-all">Custom Chart of Accounts</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-white transition-all">MRR Reporting</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-white transition-all">Deferred Revenue Management</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-white transition-all">Fundraising Preparation</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-white transition-all">Audit / Tax Ready Books</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-white transition-all">AR/AP Management</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-white transition-all">Cash Flow Management</a></li>
+</ul>
+</div>
+<!-- Column 3: Industry Solutions -->
+<div>
+<h3 class="text-lg font-semibold mb-6">Industry Solutions</h3>
+<ul class="space-y-3">
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-all">SaaS Companies</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-all">Fintech Startups</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-all">E-commerce Tech</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-all">AI & Machine Learning</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-all">Mobile App Developers</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-all">Biotech & Healthtech</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-all">EdTech Companies</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-all">Marketplace Platforms</a></li>
+</ul>
+</div>
+<!-- Column 4: Resources & Legal -->
+<div>
+<h3 class="text-lg font-semibold mb-6">Resources & Legal</h3>
+<ul class="space-y-3">
+<li><a href="#faq" class="text-gray-400 hover:text-white transition-all">FAQ</a></li>
+<li><a href="#testimonials" class="text-gray-400 hover:text-white transition-all">Testimonials</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-all">Resources</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-all">Privacy Policy</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-all">Terms of Service</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-all">Site Map</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+<div class="mb-4 md:mb-0 text-gray-400 text-sm">
+© 2025 FinCore. All rights reserved. <span class="ml-2 bg-primary text-white px-2 py-0.5 rounded-full text-xs">Made in Canada</span>
+</div>
+<div class="flex space-x-4">
+<div class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-visa-line ri-lg"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-mastercard-line ri-lg"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-paypal-line ri-lg"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-secure-payment-line ri-lg"></i>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+// Mock data for services
+const services = [
+{
+icon: 'ri-book-open-line',
+title: 'Startup Bookkeeping',
+description: 'Specialized bookkeeping for tech startups at every stage. We handle your day-to-day financial tasks while providing the insights needed for rapid growth and investor reporting.'
+},
+{
+icon: 'ri-funds-line',
+title: 'Burn Rate & Runway Tracking',
+description: 'Critical for startups, we help you monitor cash burn rate and calculate runway with precision. Get clear visibility into your financial trajectory to make informed strategic decisions.'
+},
+{
+icon: 'ri-money-dollar-circle-line',
+title: 'Equity & Stock Option Management',
+description: 'We help track and manage your equity structure, stock option plans, and vesting schedules. Stay compliant while providing transparency to employees and investors.'
+},
+{
+icon: 'ri-file-chart-line',
+title: 'Investor Reporting & Due Diligence',
+description: 'Prepare professional financial reports for investors and funding rounds. We create the financial documentation needed to support your fundraising efforts and satisfy investor requirements.'
+},
+{
+icon: 'ri-government-line',
+title: 'R&D Tax Credits & Incentives',
+description: 'Maximize your SR&ED tax credits and other R&D incentives. Our specialized knowledge helps tech companies identify and document eligible activities to optimize tax benefits.'
+},
+{
+icon: 'ri-line-chart-line',
+title: 'SaaS Metrics & KPI Tracking',
+description: 'Track critical SaaS metrics like MRR, ARR, CAC, LTV, and churn. We help you implement financial systems that capture the data needed to measure your tech company\'s performance.'
+}
+];
+// Mock data for pricing plans
+const pricingPlans = [
+{
+name: 'Seed Stage',
+price: '$399',
+period: 'per month',
+description: 'Perfect for early-stage startups focused on product development.',
+features: [
+'Monthly bookkeeping',
+'Burn rate tracking',
+'Financial statements',
+'Bank reconciliation',
+'Up to 100 transactions per month',
+'Basic investor reporting',
+'Email support'
+],
+cta: 'Get Started',
+popular: false
+},
+{
+name: 'Growth Stage',
+price: '$699',
+period: 'per month',
+description: 'Ideal for funded startups scaling operations and team.',
+features: [
+'Everything in Seed Stage',
+'Up to 250 transactions per month',
+'SaaS metrics tracking (MRR, ARR, etc.)',
+'Equity & stock option management',
+'R&D tax credit preparation',
+'Monthly financial review call',
+'Priority email & phone support'
+],
+cta: 'Get Started',
+popular: true
+},
+{
+name: 'Scale-Up',
+price: '$1,199',
+period: 'per month',
+description: 'Comprehensive solution for later-stage startups with complex needs.',
+features: [
+'Everything in Growth Stage',
+'Up to 500 transactions per month',
+'Advanced investor reporting',
+'Multi-entity accounting',
+'Revenue recognition for SaaS',
+'Fundraising financial support',
+'Dedicated startup accountant',
+'Quarterly business review'
+],
+cta: 'Get Started',
+popular: false
+}
+];
+// Mock data for add-on services
+const addonServices = [
+{
+icon: 'ri-presentation-line',
+title: 'Pitch Deck Financials',
+price: 'From $499'
+},
+{
+icon: 'ri-government-line',
+title: 'SR&ED Tax Credit Filing',
+price: 'From $999'
+},
+{
+icon: 'ri-funds-box-line',
+title: 'Fundraising Support',
+price: 'From $799'
+},
+{
+icon: 'ri-file-chart-line',
+title: 'Financial Modeling',
+price: 'From $599'
+},
+{
+icon: 'ri-line-chart-line',
+title: 'SaaS Metrics Dashboard',
+price: 'From $399'
+},
+{
+icon: 'ri-stock-line',
+title: 'Cap Table Management',
+price: 'From $349'
+}
+];
+// Mock data for FAQ
+const faqs = [
+{
+question: 'How do you help tech startups specifically?',
+answer: 'We specialize in the unique financial needs of tech startups, including burn rate tracking, SaaS metrics reporting, equity management, R&D tax credit preparation, and investor-ready financial statements. Our team understands the startup journey and provides the financial insights needed at each stage of growth.'
+},
+{
+question: 'Can you help with our fundraising efforts?',
+answer: 'Absolutely. We prepare investor-ready financial statements, create financial projections, and help with due diligence documentation. Our financial reporting is designed to give investors confidence in your financial management and help you secure funding.'
+},
+{
+question: 'Do you understand SaaS business models?',
+answer: 'Yes, we specialize in SaaS accounting. We track critical metrics like MRR, ARR, CAC, LTV, churn, and implement proper revenue recognition for subscription businesses. Our reporting helps you understand unit economics and make data-driven decisions.'
+},
+{
+question: 'How do you help with SR&ED tax credits?',
+answer: 'We help identify eligible R&D activities, document them properly, track related expenses, and prepare the financial components of your SR&ED claim. Our process maximizes your tax credits while ensuring compliance with CRA requirements.'
+},
+{
+question: 'What accounting software do you recommend for startups?',
+answer: 'We typically recommend Xero or QuickBooks Online for tech startups, often integrated with specialized tools like Stripe, ChartMogul for SaaS metrics, and Carta for equity management. We'll help you set up a tech stack that scales with your business.'
+},
+{
+question: 'How do you handle remote teams and international operations?',
+answer: 'We're experienced with remote-first companies and international operations. We can help with multi-currency accounting, contractor payments across borders, international tax considerations, and consolidated reporting for companies with global subsidiaries.'
+},
+{
+question: 'What makes your bookkeeping services different from traditional accountants?',
+answer: 'Unlike traditional accountants, we specialize exclusively in tech startups and understand the unique financial challenges you face. We focus on metrics that matter to tech companies and investors, use modern cloud-based tools, provide real-time financial insights, and offer fixed pricing tailored to your growth stage.'
+},
+{
+question: 'How do you help startups manage their burn rate and runway?',
+answer: 'We implement detailed expense tracking categorized by department and function, provide weekly or monthly burn rate reports, calculate runway projections based on current spending patterns, and offer scenario planning for different growth trajectories. This helps founders make informed decisions about hiring, marketing spend, and fundraising timing.'
+},
+{
+question: 'Can you help with stock option plans and equity management?',
+answer: 'Yes, we help set up and maintain cap tables, track vesting schedules, account for stock-based compensation, prepare financial statements that properly reflect equity transactions, and provide documentation for 409A valuations. We also help with the financial aspects of employee option grants and exercises.'
+},
+{
+question: 'How do you handle revenue recognition for subscription businesses?',
+answer: 'We implement proper revenue recognition practices following ASC 606 standards, set up deferred revenue tracking for prepaid subscriptions, recognize revenue over the service period, account for different pricing tiers and billing cycles, and provide clear reporting on recognized vs. deferred revenue to give you an accurate picture of your financial position.'
+},
+{
+question: 'What financial metrics do you track for tech startups?',
+answer: 'Beyond standard financial statements, we track tech-specific metrics including MRR/ARR, customer acquisition cost (CAC), lifetime value (LTV), churn rate, expansion revenue, gross margin, burn rate, runway, customer cohort analysis, and unit economics. We customize reporting based on your business model and growth stage.'
+},
+{
+question: 'How quickly can you get our books in order if they're currently a mess?',
+answer: 'Our catch-up bookkeeping service typically takes 2-4 weeks depending on complexity and transaction volume. We start with a thorough assessment, create a structured plan, implement proper categorization and reconciliation, and then establish ongoing processes to keep everything organized moving forward.'
+},
+{
+question: 'Do you work with pre-revenue startups?',
+answer: 'Absolutely. Many of our clients start with us before generating revenue. We help establish proper financial foundations, expense tracking, cash flow management, and financial projections. Our Seed Stage plan is specifically designed for pre-revenue and early-revenue startups.'
+},
+{
+question: 'How do you help startups prepare for due diligence during fundraising?',
+answer: 'We prepare comprehensive financial packages including historical financials, projections, key metrics, unit economics analysis, and detailed documentation of accounting practices. We also help organize your financial data room, respond to investor queries, and provide supporting analysis for your pitch deck financials.'
+},
+{
+question: 'Can you help with financial modeling and projections?',
+answer: 'Yes, we create custom financial models that reflect your specific business model, growth assumptions, and market conditions. Our projections include P&L, cash flow, balance sheet, headcount planning, and key metrics forecasting. We also build scenario analysis tools to test different growth strategies.'
+},
+{
+question: 'How do you handle tax planning for startups?',
+answer: 'We provide proactive tax planning throughout the year, identify eligible tax credits and incentives (particularly R&D/SR&ED credits), optimize your corporate structure for tax efficiency, manage sales tax compliance across jurisdictions, and coordinate with tax specialists for complex situations like international expansion.'
+},
+{
+question: 'What about compliance with tax regulations in different provinces?',
+answer: 'We ensure compliance with GST/HST, PST, and QST requirements across all Canadian provinces where you operate. We handle registration, filing, remittance, and keep you updated on changing regulations. For startups with international operations, we coordinate with specialists in those jurisdictions.'
+},
+{
+question: 'How do you handle investor reporting requirements?',
+answer: 'We create customized reporting packages that align with your investors' expectations and requirements. This typically includes standard financial statements, cash flow analysis, burn rate and runway calculations, key performance metrics, and progress against financial milestones outlined in your funding agreements.'
+},
+{
+question: 'What's your onboarding process like?',
+answer: 'Our streamlined onboarding takes about 1-2 weeks and includes: an initial assessment of your current financial systems, setting up cloud accounting software and integrations, establishing your chart of accounts and reporting structure, importing historical data if needed, and training your team on processes for ongoing collaboration.'
+},
+{
+question: 'Do you integrate with our existing tools and systems?',
+answer: 'Yes, we integrate with popular startup tools including payment processors (Stripe, PayPal), banking platforms, expense management software, CRM systems, subscription management tools, payroll providers, and other business operations software. We create a seamless financial ecosystem that minimizes manual data entry.'
+},
+{
+question: 'How do you handle confidentiality and data security?',
+answer: 'We implement bank-level security measures including encrypted data storage, secure client portals for document sharing, strict access controls, regular security audits, and comprehensive confidentiality agreements. All our staff undergo background checks and security training.'
+},
+{
+question: 'What if we need to scale our services as we grow?',
+answer: 'Our service model is designed to scale with you. We offer tiered plans that accommodate increasing transaction volumes and complexity as you grow. We proactively suggest plan upgrades when appropriate and can add specialized services like multi-entity accounting or international tax compliance as needed.'
+},
+{
+question: 'Do you provide CFO-level strategic financial advice?',
+answer: 'Our higher-tier plans include strategic financial advisory services similar to a fractional CFO. This includes guidance on financial strategy, fundraising preparation, cash management, growth planning, and business model optimization. For clients needing dedicated CFO services, we can provide referrals to trusted partners.'
+},
+{
+question: 'How do you handle payroll and contractor payments?',
+answer: 'We integrate with leading payroll providers to ensure accurate payroll processing, tax withholding, and reporting. For contractors, we implement systems to track payments, issue T4As/1099s, and ensure compliance with tax regulations. We also help classify workers correctly as employees or contractors.'
+},
+{
+question: 'What about financial controls and fraud prevention?',
+answer: 'We implement robust financial controls including segregation of duties, approval workflows, regular reconciliations, and audit trails. We also provide recommendations for internal policies that protect your assets while maintaining the agility needed in a startup environment.'
+}
+];
+// Mock data for footer services
+const footerServices = [
+'Monthly Bookkeeping',
+'Payroll Services',
+'Tax Filing & Audit',
+'Catch Up Bookkeeping',
+'Professional Services',
+'Accounts Payable/Receivable'
+];
+// Mock data for footer industries
+const footerIndustries = [
+'SaaS Companies',
+'Fintech Startups',
+'E-commerce Tech',
+'AI & Machine Learning',
+'Mobile App Developers',
+'Biotech & Healthtech',
+'EdTech Companies',
+'Blockchain & Crypto',
+'Hardware Startups',
+'Marketplace Platforms'
+];
+// Mock data for testimonials
+const testimonials = [
+{
+name: 'Alex Rivera',
+position: 'CEO, CloudStack Technologies',
+image: 'https://readdy.ai/api/search-image?query=professional headshot of a confident tech CEO with short dark hair, warm smile, modern tech office background slightly blurred, high quality professional portrait&width=100&height=100&seq=test1&orientation=squarish',
+quote: 'FinCore has been instrumental in our growth from seed to Series A. Their understanding of SaaS metrics and investor reporting helped us secure funding and make data-driven decisions about our expansion strategy.'
+},
+{
+name: 'Emily Zhang',
+position: 'Founder, FinTech Innovations',
+image: 'https://readdy.ai/api/search-image?query=professional headshot of an asian female tech entrepreneur with glasses, business casual attire, confident expression, clean modern background, high quality professional portrait&width=100&height=100&seq=test2&orientation=squarish',
+quote: 'As a fintech founder, I needed bookkeepers who understand both finance and technology. FinCore exceeded my expectations with their expertise in subscription revenue models and their ability to create financial reports that impressed our investors.'
+},
+{
+name: 'Jordan Taylor',
+position: 'CTO, DevOps Solutions',
+image: 'https://readdy.ai/api/search-image?query=professional headshot of a young tech CTO with casual tech company attire, friendly confident smile, tech office environment slightly blurred, high quality professional portrait&width=100&height=100&seq=test3&orientation=squarish',
+quote: 'FinCore helped us maximize our SR&ED tax credits, recovering over $200K that we reinvested in development. Their understanding of what qualifies as R&D from a tax perspective has been invaluable to our bottom line.'
+},
+{
+name: 'Sophia Patel',
+position: 'CFO, AI Analytics Platform',
+image: 'https://readdy.ai/api/search-image?query=professional headshot of an indian female CFO, professional business attire, confident expression, modern office background slightly blurred, high quality professional portrait&width=100&height=100&seq=test4&orientation=squarish',
+quote: 'When we were preparing for our Series B, FinCore organized our financials and created projections that withstood intense due diligence. Their expertise in startup accounting gave our investors confidence in our financial management.'
+},
+{
+name: 'Marcus Johnson',
+position: 'Founder, EdTech Innovations',
+image: 'https://readdy.ai/api/search-image?query=professional headshot of a black male tech founder, smart casual attire, warm professional smile, modern tech office background, high quality professional portrait&width=100&height=100&seq=test5&orientation=squarish',
+quote: 'FinCore helped us transition from a service-based model to a SaaS model by implementing proper revenue recognition and metrics tracking. Their insights into our unit economics helped us optimize our pricing strategy.'
+},
+{
+name: 'Olivia Chen',
+position: 'COO, HealthTech Solutions',
+image: 'https://readdy.ai/api/search-image?query=professional headshot of an asian female COO, well-dressed in business attire, confident expression, healthcare tech environment slightly blurred in background, high quality professional portrait&width=100&height=100&seq=test6&orientation=squarish',
+quote: 'Managing burn rate was critical during our product development phase. FinCore provided weekly cash flow updates and runway projections that helped us make strategic decisions about hiring and expansion timing.'
+}
+];
+// Services are now hardcoded in the HTML
+// Pricing plans are now hardcoded in the HTML
+// Add-on services are now hardcoded in the HTML
+// Don't render FAQ dynamically since they're already in the HTML
+document.addEventListener('DOMContentLoaded', function() {
+// This initialization is now handled in the code block below
+});
+// Footer services and industries are now hardcoded in the HTML
+// No need to render them dynamically anymore
+// Testimonials are now hardcoded in the HTML
+// document.getElementById('testimonials-container').innerHTML = testimonials.map(testimonial => `
+// <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+// <div class="flex items-center mb-4">
+// <img src="${testimonial.image}" alt="${testimonial.name}" class="w-16 h-16 rounded-full object-cover mr-4">
+// <div>
+// <h4 class="font-semibold text-gray-900">${testimonial.name}</h4>
+// <p class="text-sm text-gray-600">${testimonial.position}</p>
+// </div>
+// </div>
+// <div class="mb-4">
+// <div class="flex text-yellow-400">
+// <i class="ri-star-fill"></i>
+// <i class="ri-star-fill"></i>
+// <i class="ri-star-fill"></i>
+// <i class="ri-star-fill"></i>
+// <i class="ri-star-fill"></i>
+// </div>
+// </div>
+// <p class="text-gray-700 italic">"${testimonial.quote}"</p>
+// </div>
+// `).join('');
+// FAQ toggle function
+function toggleFaq(index) {
+const answer = document.querySelector(`.faq-answer-${index}`);
+const icon = document.querySelector(`.faq-icon-${index}`);
+// Update FAQ content based on index
+updateFaqContent(index);
+if (answer.classList.contains('hidden')) {
+// Close all other open FAQs first
+document.querySelectorAll('[class^="faq-answer-"]').forEach(item => {
+if (!item.classList.contains('hidden')) {
+const idx = item.className.match(/faq-answer-(\d+)/)[1];
+const iconElement = document.querySelector(`.faq-icon-${idx}`);
+// First set max-height to actual height before transitioning to 0
+item.style.maxHeight = item.scrollHeight + 'px';
+item.style.opacity = '1';
+setTimeout(() => {
+item.style.opacity = '0';
+item.style.maxHeight = '0';
+setTimeout(() => {
+item.classList.add('hidden');
+if (iconElement) {
+iconElement.classList.remove('ri-arrow-up-s-line');
+iconElement.classList.add('ri-arrow-down-s-line');
+iconElement.style.transform = 'rotate(0deg)';
+}
+}, 300);
+}, 10);
+}
+});
+// Open the clicked FAQ
+answer.classList.remove('hidden');
+icon.classList.remove('ri-arrow-down-s-line');
+icon.classList.add('ri-arrow-up-s-line');
+icon.style.transform = 'rotate(180deg)';
+// Set initial height to 0, then animate to actual height
+answer.style.maxHeight = '0';
+answer.style.opacity = '0';
+setTimeout(() => {
+answer.style.maxHeight = answer.scrollHeight + 'px';
+answer.style.opacity = '1';
+}, 10);
+} else {
+// Close the FAQ
+icon.classList.remove('ri-arrow-up-s-line');
+icon.classList.add('ri-arrow-down-s-line');
+icon.style.transform = 'rotate(0deg)';
+answer.style.opacity = '0';
+answer.style.maxHeight = '0';
+setTimeout(() => {
+answer.classList.add('hidden');
+}, 300);
+}
+}
+// Function to update FAQ content based on the image data
+function updateFaqContent(index) {
+const faqContents = [
+// FAQ 1: What makes your bookkeeping service different for startups?
+`<p>We specialize in startup bookkeeping, which means we understand burn rate, runway, SaaS revenue, fundraising, and grant tracking. Our services are designed to scale with you—from pre-seed to Series A and beyond.</p>
+<p class="mt-2">Unlike traditional accountants, we focus exclusively on the unique financial challenges tech startups face. We provide real-time metrics that matter to investors, implement cloud-based systems that integrate with your tech stack, and offer fixed pricing models that grow with your business.</p>`,
+// FAQ 2: How much does it cost?
+`<p>Our startup bookkeeping plans start at $399/month depending on your volume of transactions and service needs. We offer flat-rate packages so you always know what you're paying.</p>`,
+// FAQ 3: How fast can we get started?
+`<p>Usually within 3-5 business days. We'll schedule a quick onboarding call, connect your accounts, and you'll have your books cleaned up and ready to go in no time.</p>`,
+// FAQ 4: Do you work with early-stage or pre-revenue startups?
+`<p>Yes! In fact, many of our clients start with us before generating revenue. We help you get organized early so you're ready for fundraising, audits, and investor reporting from day one.</p>`,
+// FAQ 5: What software do you support?
+`<p>We support QuickBooks, Xero, Wave, Zoho Books, and can integrate with platforms like Stripe, Gusto, Shopify, Brex, and Ramp. We also help you choose the right tools you're just starting out.</p>`,
+// FAQ 6: Can you help with tax filing or audits?
+`<p>We don't directly file taxes, but we provide clean, audit-ready financials and work closely with your CPA or tax advisor. Need a recommendation? We can connect you to startup-friendly tax pros.</p>`,
+// FAQ 7: Do I need to do anything if I hire your team?
+`<p>Very little. Once we onboard you, we automate as much as possible. You'll have a dedicated bookkeeper who checks in monthly, and you'll always know where your money is going.</p>`,
+// FAQ 8: How do you handle revenue recognition for SaaS or recurring revenue models?
+`<p>We follow GAAP-compliant revenue recognition practices and can structure your books to track deferred revenue, MRR/ARR, and contract revenue—perfect for SaaS businesses.</p>`,
+// FAQ 9: Can you help us with investor or grant reporting?
+`<p>Yes. We provide clean financial statements and can customize reports to match grant requirements or investor due diligence checklists. Many of our clients use our books to close their next funding round.</p>`,
+// FAQ 10: Is my financial data safe with you?
+`<p>Absolutely. We use bank-grade security, encrypted storage, and secure portals for all sensitive documents. Your data is 100% private and backed up in the cloud.</p>`
+];
+const answer = document.querySelector(`.faq-answer-${index}`);
+if (answer) {
+answer.innerHTML = faqContents[index];
+}
+}
+// Make toggleFaq available globally
+window.toggleFaq = toggleFaq;
+// Initialize FAQ items when page loads
+document.addEventListener('DOMContentLoaded', function() {
+// Initialize all FAQ items to ensure they have the correct classes
+document.querySelectorAll('[class^="faq-answer-"]').forEach(item => {
+if (!item.classList.contains('hidden')) {
+item.classList.add('hidden');
+}
+item.style.maxHeight = '0';
+item.style.opacity = '0';
+});
+document.querySelectorAll('[class^="faq-icon-"]').forEach(icon => {
+if (icon.classList.contains('ri-arrow-up-s-line')) {
+icon.classList.remove('ri-arrow-up-s-line');
+icon.classList.add('ri-arrow-down-s-line');
+}
+icon.style.transform = 'rotate(0deg)';
+});
+// Add click event listeners to all FAQ buttons for better accessibility
+document.querySelectorAll('#faq-container button').forEach((button, index) => {
+button.setAttribute('aria-expanded', 'false');
+button.setAttribute('aria-controls', `faq-answer-${index}`);
+});
+// Add event listeners to update aria attributes when FAQs are toggled
+document.querySelectorAll('#faq-container button').forEach((button, index) => {
+button.addEventListener('click', function() {
+const isExpanded = this.getAttribute('aria-expanded') === 'true';
+this.setAttribute('aria-expanded', !isExpanded);
+});
+});
+// Fix for FAQ functionality - show first FAQ by default
+setTimeout(() => {
+toggleFaq(0);
+}, 500);
+});
+// Mobile menu toggle function
+function toggleMobileMenu() {
+const mobileMenu = document.getElementById('mobile-menu');
+if (mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.remove('hidden');
+} else {
+mobileMenu.classList.add('hidden');
+}
+}
+// Make toggleMobileMenu available globally
+window.toggleMobileMenu = toggleMobileMenu;
+// Function to handle smooth scrolling
+function scrollToSection(e, targetId) {
+e.preventDefault();
+if (targetId === '#') {
+// If href is just "#", scroll to top
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+return;
+}
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+targetElement.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+}
+}
+// Function to handle mobile menu scrolling and closing
+function scrollToSectionAndCloseMobile(e, targetId) {
+e.preventDefault();
+toggleMobileMenu();
+setTimeout(() => {
+scrollToSection(e, targetId);
+}, 300); // Small delay to allow menu to close first
+}
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') {
+// If href is just "#", scroll to top
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+return;
+}
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+targetElement.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+}
+});
+});
+// Make scrollToSection available globally
+window.scrollToSection = scrollToSection;
+window.scrollToSectionAndCloseMobile = scrollToSectionAndCloseMobile;
+// Contact form submission
+function submitContactForm() {
+const firstName = document.getElementById('firstName').value;
+const lastName = document.getElementById('lastName').value;
+const email = document.getElementById('email').value;
+const phone = document.getElementById('phone').value;
+const business = document.getElementById('business').value;
+const message = document.getElementById('message').value;
+// Form validation
+if (!firstName || !lastName || !email || !phone || !business || !message) {
+showFormMessage('Please fill in all fields', 'error');
+return;
+}
+// Email validation
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!emailRegex.test(email)) {
+showFormMessage('Please enter a valid email address', 'error');
+return;
+}
+// Simulate form submission
+const formData = {
+firstName,
+lastName,
+email,
+phone,
+business,
+message
+};
+console.log('Form submitted:', formData);
+// Clear form
+document.getElementById('contactForm').reset();
+// Show success message
+showFormMessage('Thank you! Your message has been sent. We\'ll get back to you within 24 hours.', 'success');
+}
+function showFormMessage(message, type) {
+// Create message element if it doesn't exist
+let messageEl = document.getElementById('form-message');
+if (!messageEl) {
+messageEl = document.createElement('div');
+messageEl.id = 'form-message';
+messageEl.className = 'mt-4 p-4 rounded text-center';
+document.getElementById('contactForm').appendChild(messageEl);
+}
+// Set message content and style
+messageEl.textContent = message;
+if (type === 'error') {
+messageEl.className = 'mt-4 p-4 rounded text-center bg-red-100 text-red-700';
+} else {
+messageEl.className = 'mt-4 p-4 rounded text-center bg-green-100 text-green-700';
+}
+// Auto-hide message after 5 seconds
+setTimeout(() => {
+messageEl.style.opacity = '0';
+messageEl.style.transition = 'opacity 0.5s ease';
+setTimeout(() => {
+messageEl.remove();
+}, 500);
+}, 5000);
+}
+</script>
+</body>
+</html>

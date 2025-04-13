@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service - FinCore</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#007a78',secondary:'#007a78'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+  font-family: 'Inter', sans-serif;
+}
+.hero-gradient {
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0) 100%);
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.back-to-top {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Header Navigation -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d" data-readdy="true" class="flex items-center">
+<span class="text-3xl font-['Pacifico'] text-primary">FinCore</span>
+</a>
+<nav class="hidden md:flex space-x-8">
+<a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d#services" data-readdy="true" class="text-gray-700 hover:text-primary font-medium">Services</a>
+<a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d#pricing" data-readdy="true" class="text-gray-700 hover:text-primary font-medium">Pricing</a>
+<a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/d3244708-a490-48f9-b294-b9776bb0fda2" data-readdy="true" class="text-gray-700 hover:text-primary font-medium">Start Up & Tech</a>
+<a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d#testimonials" data-readdy="true" class="text-gray-700 hover:text-primary font-medium">Testimonials</a>
+<a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d#faq" data-readdy="true" class="text-gray-700 hover:text-primary font-medium">FAQ</a>
+<a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d#contact" data-readdy="true" class="text-gray-700 hover:text-primary font-medium">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d#contact" data-readdy="true" class="hidden md:block bg-primary text-white px-5 py-2 !rounded-button whitespace-nowrap hover:opacity-90 transition-all">Get Started</a>
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" onclick="toggleMobileMenu()">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+<div class="container mx-auto px-4 py-3">
+<nav class="flex flex-col space-y-4">
+<a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d#services" data-readdy="true" class="text-gray-700 hover:text-primary font-medium py-2">Services</a>
+<a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d#pricing" data-readdy="true" class="text-gray-700 hover:text-primary font-medium py-2">Pricing</a>
+<a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/d3244708-a490-48f9-b294-b9776bb0fda2" data-readdy="true" class="text-gray-700 hover:text-primary font-medium py-2">Start Up & Tech</a>
+<a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d#testimonials" data-readdy="true" class="text-gray-700 hover:text-primary font-medium py-2">Testimonials</a>
+<a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d#faq" data-readdy="true" class="text-gray-700 hover:text-primary font-medium py-2">FAQ</a>
+<a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d#contact" data-readdy="true" class="text-gray-700 hover:text-primary font-medium py-2">Contact</a>
+<a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d#contact" data-readdy="true" class="bg-primary text-white px-5 py-2 !rounded-button whitespace-nowrap hover:opacity-90 transition-all text-center mt-2">Get Started</a>
+</nav>
+</div>
+</div>
+</header>
+
+<!-- Breadcrumb -->
+<div class="bg-white border-b border-gray-200">
+<div class="container mx-auto px-4 py-3">
+<div class="flex items-center text-sm text-gray-600">
+<a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d" data-readdy="true" class="hover:text-primary transition-all">Home</a>
+<span class="mx-2"><i class="ri-arrow-right-s-line"></i></span>
+<span class="text-gray-900 font-medium">Terms of Service</span>
+</div>
+</div>
+</div>
+
+<!-- Terms of Service Content -->
+<main class="py-12 lg:py-16">
+<div class="container mx-auto px-4">
+    <div class="flex flex-col lg:flex-row gap-8">
+        <!-- Sidebar with Table of Contents -->
+        <div class="lg:w-1/4">
+            <div class="bg-white rounded-lg shadow-sm p-6 sticky top-24">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Table of Contents</h3>
+                <ul class="space-y-2 text-gray-700" id="table-of-contents">
+                    <li><a href="#introduction" class="hover:text-primary transition-all block py-1">1. Introduction and Scope</a></li>
+                    <li><a href="#service-agreement" class="hover:text-primary transition-all block py-1">2. Service Agreement Terms</a></li>
+                    <li><a href="#user-responsibilities" class="hover:text-primary transition-all block py-1">3. User Responsibilities</a></li>
+                    <li><a href="#payment-terms" class="hover:text-primary transition-all block py-1">4. Payment Terms</a></li>
+                    <li><a href="#liability" class="hover:text-primary transition-all block py-1">5. Liability Limitations</a></li>
+                    <li><a href="#intellectual-property" class="hover:text-primary transition-all block py-1">6. Intellectual Property</a></li>
+                    <li><a href="#privacy" class="hover:text-primary transition-all block py-1">7. Privacy Policy</a></li>
+                    <li><a href="#dispute-resolution" class="hover:text-primary transition-all block py-1">8. Dispute Resolution</a></li>
+                    <li><a href="#termination" class="hover:text-primary transition-all block py-1">9. Termination Conditions</a></li>
+                    <li><a href="#amendments" class="hover:text-primary transition-all block py-1">10. Amendments</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="lg:w-3/4">
+            <div class="bg-white rounded-lg shadow-sm p-6 lg:p-8">
+                <div class="mb-8">
+                    <h1 class="text-3xl font-bold text-gray-900 mb-2">Terms of Service</h1>
+                    <p class="text-gray-600">Last Updated: April 11, 2025</p>
+                </div>
+                
+                <div class="prose max-w-none text-gray-700">
+                    <section id="introduction" class="mb-10">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Introduction and Scope</h2>
+                        <p class="mb-4">Welcome to FinCore ("Company", "we", "our", "us"). These Terms of Service ("Terms", "Terms of Service") govern your use of our website, products, and services (collectively, "Services") operated by FinCore.</p>
+                        <p class="mb-4">By accessing or using our Services, you agree to be bound by these Terms. If you disagree with any part of the Terms, you may not access the Services.</p>
+                        <p>These Terms apply to all visitors, users, and others who access or use our Services, including clients who engage our bookkeeping and financial services.</p>
+                    </section>
+                    
+                    <section id="service-agreement" class="mb-10">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Service Agreement Terms</h2>
+                        <p class="mb-4">Our Services include, but are not limited to, bookkeeping, payroll processing, accounts payable and receivable management, tax filing preparation, and other financial services as agreed upon in a separate Service Agreement.</p>
+                        <p class="mb-4">Upon engagement of our Services, we will provide you with a detailed Service Agreement outlining the specific services to be performed, timelines, deliverables, and other relevant terms.</p>
+                        <p class="mb-4">We reserve the right to refuse service to anyone for any reason at any time.</p>
+                        <div class="bg-gray-50 border-l-4 border-primary p-4 my-6">
+                            <p class="font-medium">Service Delivery Commitment</p>
+                            <p>We commit to delivering the agreed-upon services with professional care, skill, and diligence in accordance with industry standards and applicable laws and regulations.</p>
+                        </div>
+                        <p>Any modifications to the scope of services must be agreed upon in writing by both parties.</p>
+                    </section>
+                    
+                    <section id="user-responsibilities" class="mb-10">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">3. User Responsibilities and Obligations</h2>
+                        <p class="mb-4">As a client of FinCore, you agree to:</p>
+                        <ul class="list-disc pl-6 mb-4 space-y-2">
+                            <li>Provide accurate, complete, and timely information necessary for the performance of our Services.</li>
+                            <li>Review all reports, statements, and other deliverables provided by us within a reasonable time frame.</li>
+                            <li>Maintain the confidentiality of any login credentials provided for accessing our systems or platforms.</li>
+                            <li>Comply with all applicable laws and regulations related to your business operations.</li>
+                            <li>Notify us promptly of any errors, discrepancies, or concerns regarding our Services.</li>
+                            <li>Maintain appropriate backup copies of your financial records and data.</li>
+                        </ul>
+                        <p class="mb-4">You acknowledge that the accuracy and completeness of our Services depend on the information you provide to us.</p>
+                        <p>You are solely responsible for making all business and financial decisions for your business. Our Services are advisory in nature, and we do not make business decisions on your behalf.</p>
+                    </section>
+                    
+                    <section id="payment-terms" class="mb-10">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Payment Terms and Conditions</h2>
+                        <p class="mb-4">Payment for our Services shall be made in accordance with the pricing plan selected and as detailed in your Service Agreement.</p>
+                        <p class="mb-4">Our standard payment terms include:</p>
+                        <ul class="list-disc pl-6 mb-4 space-y-2">
+                            <li>Monthly subscription fees are billed in advance on the first day of each month.</li>
+                            <li>One-time services are billed upon completion unless otherwise specified.</li>
+                            <li>Payment is due within 15 days of invoice date unless otherwise specified.</li>
+                            <li>Accepted payment methods include credit card, electronic funds transfer, and other methods as specified in your Service Agreement.</li>
+                            <li>Late payments may incur a late fee of 1.5% per month or the maximum rate permitted by law, whichever is less.</li>
+                        </ul>
+                        <div class="bg-gray-50 border-l-4 border-primary p-4 my-6">
+                            <p class="font-medium">Fee Adjustments</p>
+                            <p>We reserve the right to adjust our fees with 30 days' prior written notice. If you continue to use our Services after the fee adjustment, you will be deemed to have accepted the new fees.</p>
+                        </div>
+                        <p>Non-payment may result in suspension or termination of Services. You will remain liable for all outstanding amounts due.</p>
+                    </section>
+                    
+                    <section id="liability" class="mb-10">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Liability Limitations</h2>
+                        <p class="mb-4">To the maximum extent permitted by applicable law, FinCore and its officers, directors, employees, and agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:</p>
+                        <ul class="list-disc pl-6 mb-4 space-y-2">
+                            <li>Your use or inability to use our Services;</li>
+                            <li>Any unauthorized access to or use of our servers and/or any personal information stored therein;</li>
+                            <li>Any interruption or cessation of transmission to or from our Services;</li>
+                            <li>Any bugs, viruses, trojan horses, or the like that may be transmitted to or through our Services;</li>
+                            <li>Any errors or omissions in any content or for any loss or damage incurred as a result of the use of any content posted, emailed, transmitted, or otherwise made available through our Services.</li>
+                        </ul>
+                        <p class="mb-4">In no event shall our total liability to you for all claims exceed the amount paid by you to us for the Services during the twelve (12) months preceding the event giving rise to the liability.</p>
+                        <p>The limitations of liability set forth above are fundamental elements of the basis of the bargain between FinCore and you.</p>
+                    </section>
+                    
+                    <section id="intellectual-property" class="mb-10">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">6. Intellectual Property Rights</h2>
+                        <p class="mb-4">The Service and its original content, features, and functionality are and will remain the exclusive property of FinCore and its licensors. The Service is protected by copyright, trademark, and other laws of both Canada and foreign countries.</p>
+                        <p class="mb-4">Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of FinCore.</p>
+                        <p class="mb-4">You retain all rights to your data and information provided to us in connection with our Services. You grant us a limited license to use your data solely for the purpose of providing the Services to you.</p>
+                        <p>Any templates, reports, or other materials created by us and provided to you as part of our Services remain our intellectual property, and you are granted a non-exclusive, non-transferable license to use such materials solely in connection with our Services.</p>
+                    </section>
+                    
+                    <section id="privacy" class="mb-10">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">7. Privacy Policy References</h2>
+                        <p class="mb-4">Your privacy is important to us. Our Privacy Policy, which is incorporated into these Terms by reference, explains how we collect, use, and disclose information about you.</p>
+                        <p class="mb-4">By using our Services, you consent to our collection, use, and disclosure of information as described in our Privacy Policy.</p>
+                        <p class="mb-4">Our Privacy Policy can be found at <a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/94b8b131-c9bc-4df1-96d8-9f04c07948ce" data-readdy="true" class="text-primary hover:underline">Privacy Policy</a>.</p>
+                        <div class="bg-gray-50 border-l-4 border-primary p-4 my-6">
+                            <p class="font-medium">Client Confidentiality</p>
+                            <p>We maintain strict confidentiality regarding all client information and will not disclose your information to third parties except as required by law or as necessary to provide our Services.</p>
+                        </div>
+                    </section>
+                    
+                    <section id="dispute-resolution" class="mb-10">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">8. Dispute Resolution Procedures</h2>
+                        <p class="mb-4">In the event of any dispute, claim, or controversy arising out of or relating to these Terms or the breach, termination, enforcement, interpretation, or validity thereof (collectively, "Disputes"), the parties shall first attempt to resolve the Dispute informally by negotiation.</p>
+                        <p class="mb-4">If the Dispute cannot be resolved through informal negotiation, either party may initiate mediation by providing written notice to the other party. The mediation shall be conducted in Vancouver, British Columbia, Canada, unless otherwise agreed by the parties.</p>
+                        <p class="mb-4">If the Dispute is not resolved through mediation, the parties agree to submit the Dispute to binding arbitration in accordance with the rules of the British Columbia International Commercial Arbitration Centre.</p>
+                        <p class="mb-4">The arbitration shall be conducted by a single arbitrator selected by mutual agreement of the parties or, if the parties cannot agree, by the British Columbia International Commercial Arbitration Centre.</p>
+                        <p>Any award rendered by the arbitrator shall be final and binding on the parties and may be entered as a judgment in any court of competent jurisdiction.</p>
+                    </section>
+                    
+                    <section id="termination" class="mb-10">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">9. Termination Conditions</h2>
+                        <p class="mb-4">We may terminate or suspend your access to our Services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms.</p>
+                        <p class="mb-4">You may terminate your engagement with us by providing written notice in accordance with the terms of your Service Agreement, typically requiring 30 days' advance notice.</p>
+                        <p class="mb-4">Upon termination:</p>
+                        <ul class="list-disc pl-6 mb-4 space-y-2">
+                            <li>All rights and licenses granted to you under these Terms will immediately cease.</li>
+                            <li>You will remain liable for all amounts due up to and including the date of termination.</li>
+                            <li>We will provide you with a copy of your financial records and data in a standard format.</li>
+                            <li>We may retain copies of your data as required by law or in accordance with our data retention policies.</li>
+                        </ul>
+                        <p>Provisions of these Terms that by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.</p>
+                    </section>
+                    
+                    <section id="amendments" class="mb-10">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">10. Amendments and Updates</h2>
+                        <p class="mb-4">We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+                        <p class="mb-4">By continuing to access or use our Services after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you are no longer authorized to use the Services.</p>
+                        <div class="bg-gray-50 border-l-4 border-primary p-4 my-6">
+                            <p class="font-medium">Notification of Changes</p>
+                            <p>We will notify you of any changes to these Terms by posting the new Terms on this page and updating the "Last Updated" date at the top of this page. We may also provide additional notice, such as an email notification, at our discretion.</p>
+                        </div>
+                    </section>
+                    
+                    <section class="mb-10">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>
+                        <p class="mb-4">If you have any questions about these Terms of Service, please contact us:</p>
+                        <ul class="list-none space-y-2">
+                            <li><strong>Email:</strong> legal@fincore.ca</li>
+                            <li><strong>Phone:</strong> (604) 239-3350</li>
+                            <li><strong>Address:</strong> 450 SW Marine Dr, Vancouver, BC, Canada</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all">
+<i class="ri-arrow-up-line ri-lg"></i>
+</button>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- Column 1: Company Info -->
+<div>
+<div class="mb-4">
+<span class="text-3xl font-['Pacifico'] text-white">FinCore</span>
+</div>
+<p class="text-gray-400 mb-6">Affordable and hassle-free bookkeeping services for Canadian small businesses. 100% Canadian owned and operated.</p>
+<div class="flex space-x-2 mb-4">
+<span class="bg-primary bg-opacity-20 text-primary px-2 py-0.5 rounded-full text-xs">Professional</span>
+<span class="bg-primary bg-opacity-20 text-primary px-2 py-0.5 rounded-full text-xs">Reliable</span>
+<span class="bg-primary bg-opacity-20 text-primary px-2 py-0.5 rounded-full text-xs">Affordable</span>
+</div>
+<div class="space-y-2 mb-6">
+<div class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-mail-line"></i>
+</div>
+<span class="ml-2 text-gray-400">sales@fincore.ca</span>
+</div>
+<div class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-phone-line"></i>
+</div>
+<span class="ml-2 text-gray-400">(604) 239-3350</span>
+</div>
+</div>
+<div class="flex space-x-4">
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-all">
+<i class="ri-facebook-fill text-white"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-all">
+<i class="ri-twitter-x-fill text-white"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-all">
+<i class="ri-linkedin-fill text-white"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-all">
+<i class="ri-instagram-fill text-white"></i>
+</a>
+</div>
+</div>
+<!-- Column 2: Services -->
+<div>
+<h3 class="text-lg font-semibold mb-6">Services</h3>
+<ul class="space-y-3" id="footer-services">
+<li><a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d#services" data-readdy="true" class="text-gray-400 hover:text-white transition-all">Monthly Bookkeeping</a></li>
+<li><a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d#services" data-readdy="true" class="text-gray-400 hover:text-white transition-all">Payroll Services</a></li>
+<li><a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d#services" data-readdy="true" class="text-gray-400 hover:text-white transition-all">Tax Filing & Audit</a></li>
+<li><a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d#services" data-readdy="true" class="text-gray-400 hover:text-white transition-all">Catch Up Bookkeeping</a></li>
+<li><a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d#services" data-readdy="true" class="text-gray-400 hover:text-white transition-all">Professional Services</a></li>
+<li><a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d#services" data-readdy="true" class="text-gray-400 hover:text-white transition-all">Accounts Payable/Receivable</a></li>
+</ul>
+</div>
+<!-- Column 3: Industry Solutions -->
+<div>
+<h3 class="text-lg font-semibold mb-6">Industry Solutions</h3>
+<ul class="space-y-3" id="footer-industries">
+<li><a href="#" class="text-gray-400 hover:text-white transition-all">Plumbers & HVAC</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-all">Electricians</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-all">Realtors & Real Estate</a></li>
+<li><a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/d3244708-a490-48f9-b294-b9776bb0fda2" data-readdy="true" class="text-gray-400 hover:text-white transition-all">Startups & Tech</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-all">Restaurants & Hospitality</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-all">Construction & Contractors</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-all">Medical & Healthcare</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-all">E-commerce & Retail</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-all">Professional Services</a></li>
+</ul>
+</div>
+<!-- Column 4: Resources & Legal -->
+<div>
+<h3 class="text-lg font-semibold mb-6">Resources & Legal</h3>
+<ul class="space-y-3">
+<li><a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d#faq" data-readdy="true" class="text-gray-400 hover:text-white transition-all">FAQ</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-all">Blog</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-all">Resources</a></li>
+<li><a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/94b8b131-c9bc-4df1-96d8-9f04c07948ce" data-readdy="true" class="text-gray-400 hover:text-white transition-all">Privacy Policy</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-all font-medium text-white">Terms of Service</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-all">Site Map</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+<div class="mb-4 md:mb-0 text-gray-400 text-sm">
+© 2025 FinCore. All rights reserved. <span class="ml-2 bg-primary text-white px-2 py-0.5 rounded-full text-xs">Made in Canada</span>
+</div>
+<div class="flex space-x-4">
+<div class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-visa-line ri-lg"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-mastercard-line ri-lg"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-paypal-line ri-lg"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-secure-payment-line ri-lg"></i>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+// Mobile menu toggle function
+function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+    } else {
+        mobileMenu.classList.add('hidden');
+    }
+}
+
+// Make toggleMobileMenu available globally
+window.toggleMobileMenu = toggleMobileMenu;
+
+// Smooth scrolling for table of contents
+document.querySelectorAll('#table-of-contents a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            // Get the header height for offset
+            const headerHeight = document.querySelector('header').offsetHeight;
+            
+            window.scrollTo({
+                top: targetElement.offsetTop - headerHeight - 20,
+                behavior: 'smooth'
+            });
+            
+            // Update URL without page reload
+            history.pushState(null, null, targetId);
+        }
+    });
+});
+
+// Back to top button functionality
+const backToTopButton = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('show');
+    } else {
+        backToTopButton.classList.remove('show');
+    }
+});
+
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// Highlight active section in table of contents
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section[id]');
+    const scrollPosition = window.scrollY + 100;
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            document.querySelectorAll('#table-of-contents a').forEach(link => {
+                link.classList.remove('text-primary', 'font-medium');
+                if (link.getAttribute('href') === `#${sectionId}`) {
+                    link.classList.add('text-primary', 'font-medium');
+                }
+            });
+        }
+    });
+});
+
+// Initialize first section as active on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const firstLink = document.querySelector('#table-of-contents a');
+    if (firstLink) {
+        firstLink.classList.add('text-primary', 'font-medium');
+    }
+});
+</script>
+</body>
+</html>

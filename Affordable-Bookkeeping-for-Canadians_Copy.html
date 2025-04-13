@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FinCore - Bookkeeping Services for Small Businesses</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#007a78',secondary:'#007a78'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+}
+.hero-gradient {
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0) 100%);
+}
+.service-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Header Navigation -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d" data-readdy="true" class="flex items-center">
+<span class="text-3xl font-['Pacifico'] text-primary">FinCore</span>
+</a>
+<nav class="hidden md:flex space-x-8">
+<a href="#services" class="text-gray-700 hover:text-primary font-medium">Services</a>
+<a href="#pricing" class="text-gray-700 hover:text-primary font-medium">Pricing</a>
+<a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/d3244708-a490-48f9-b294-b9776bb0fda2" data-readdy="true" class="text-gray-700 hover:text-primary font-medium">Start Up & Tech</a>
+<a href="#testimonials" class="text-gray-700 hover:text-primary font-medium">Testimonials</a>
+<a href="#faq" class="text-gray-700 hover:text-primary font-medium">FAQ</a>
+<a href="#contact" class="text-gray-700 hover:text-primary font-medium">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<a href="#contact" class="hidden md:block bg-primary text-white px-5 py-2 !rounded-button whitespace-nowrap hover:opacity-90 transition-all">Get Started</a>
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" onclick="toggleMobileMenu()">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+<div class="container mx-auto px-4 py-3">
+<nav class="flex flex-col space-y-4">
+<a href="#services" class="text-gray-700 hover:text-primary font-medium py-2">Services</a>
+<a href="#pricing" class="text-gray-700 hover:text-primary font-medium py-2">Pricing</a>
+<a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/d3244708-a490-48f9-b294-b9776bb0fda2" data-readdy="true" class="text-gray-700 hover:text-primary font-medium py-2">Start Up & Tech</a>
+<a href="#testimonials" class="text-gray-700 hover:text-primary font-medium py-2">Product</a>
+<a href="#faq" class="text-gray-700 hover:text-primary font-medium py-2">FAQ</a>
+<a href="#contact" class="text-gray-700 hover:text-primary font-medium py-2">Contact</a>
+<a href="#contact" class="bg-primary text-white px-5 py-2 !rounded-button whitespace-nowrap hover:opacity-90 transition-all text-center mt-2">Get Started</a>
+</nav>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img src="https://public.readdy.ai/ai/img_res/88214de772fc8c500e2b60880f6b4f39.jpg" alt="Bookkeeping Hero" class="w-full h-full object-cover object-top">
+</div>
+<div class="relative z-10 hero-gradient w-full h-full">
+<div class="container mx-auto px-4 py-24 md:py-32">
+<div class="max-w-2xl">
+<span class="inline-block bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm font-medium mb-4">100% Canadian Owned & Operated</span>
+<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Fully Managed Bookkeeping & Payroll Services for Small Businesses</h1>
+<p class="text-lg text-gray-700 mb-8">At FinCore, we provide essential bookkeeping & payroll services with affordable fixed pricing and no surprise costs. Focus on growing your business while we handle your financial records with precision.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="#contact" class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:opacity-90 transition-all text-center font-medium">Get Started Today</a>
+<a href="#pricing" class="border border-gray-300 bg-white text-gray-700 px-6 py-3 !rounded-button whitespace-nowrap hover:bg-gray-50 transition-all text-center font-medium">View Pricing</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Badges -->
+<section class="bg-white py-8 border-b border-gray-100">
+<div class="container mx-auto px-4">
+<div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center text-primary bg-primary p-0.5 rounded-full">
+<div class="w-full h-full rounded-full bg-white flex items-center justify-center">
+<i class="ri-shield-check-line ri-2x text-primary"></i>
+</div>
+</div>
+<span class="ml-2 text-gray-700 font-medium">100% Canadian</span>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center text-primary bg-primary p-0.5 rounded-full">
+<div class="w-full h-full rounded-full bg-white flex items-center justify-center">
+<i class="ri-price-tag-3-line ri-2x text-primary"></i>
+</div>
+</div>
+<span class="ml-2 text-gray-700 font-medium">Fixed Pricing</span>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center text-primary bg-primary p-0.5 rounded-full">
+<div class="w-full h-full rounded-full bg-white flex items-center justify-center">
+<i class="ri-customer-service-2-line ri-2x text-primary"></i>
+</div>
+</div>
+<span class="ml-2 text-gray-700 font-medium">Dedicated Support</span>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center text-primary bg-primary p-0.5 rounded-full">
+<div class="w-full h-full rounded-full bg-white flex items-center justify-center">
+<i class="ri-secure-payment-line ri-2x text-primary"></i>
+</div>
+</div>
+<span class="ml-2 text-gray-700 font-medium">Secure Systems</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section id="services" class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Our Bookkeeping Services</h2>
+<p class="text-lg text-gray-600">We provide essential bookkeeping services to help you stay organized and focused on your business. Our team ensures that your financial data is accurate, up-to-date, and ready for audit.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-container">
+<!-- Services will be rendered here -->
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section id="pricing" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
+<p class="text-lg text-gray-600">Choose the plan that fits your business needs. All plans include our core bookkeeping services with no surprise costs.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="pricing-container">
+<!-- Pricing cards will be rendered here -->
+</div>
+<div class="mt-16 bg-gray-50 rounded-lg p-8">
+<h3 class="text-xl font-semibold text-gray-900 mb-6">Popular Add-on Services</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="addon-services">
+<!-- Add-on services will be rendered here -->
+</div>
+<div class="mt-8 text-center">
+<a href="#contact" class="inline-block bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:opacity-90 transition-all font-medium">Contact us for details</a>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section id="faq" class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+<p class="text-lg text-gray-600">Find answers to common questions about our bookkeeping services.</p>
+</div>
+<div class="max-w-4xl mx-auto" id="faq-container">
+<!-- FAQ items will be rendered here -->
+</div>
+<div class="text-center mt-12">
+<a href="#contact" class="inline-block bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:opacity-90 transition-all font-medium">Get Your Free Consultation</a>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+<p class="text-lg text-gray-600">Don't just take our word for it. Here's what our clients have to say about our bookkeeping services.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="testimonials-container">
+<!-- Testimonials will be rendered here -->
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
+<p class="text-lg text-gray-600 mb-6">Let us handle your bookkeeping so you can focus on growing your business. Fill out the form and we'll get back to you within 24 hours.</p>
+<div class="flex items-center mb-6">
+<div class="w-10 h-10 flex items-center justify-center bg-primary rounded-full mr-4">
+<i class="ri-check-line text-white"></i>
+</div>
+<p class="text-gray-700">100% Canadian Owned & Operated</p>
+</div>
+<div class="space-y-6 mb-8">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary p-0.5 rounded-full mt-1">
+<div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+<i class="ri-mail-line ri-lg text-primary"></i>
+</div>
+</div>
+<div class="ml-4">
+<h4 class="font-medium text-gray-900">Email Us</h4>
+<p class="text-gray-600">sales@fin-core.com</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary p-0.5 rounded-full mt-1">
+<div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+<i class="ri-phone-line ri-lg text-primary"></i>
+</div>
+</div>
+<div class="ml-4">
+<h4 class="font-medium text-gray-900">Call Us</h4>
+<p class="text-gray-600">(604) 239-3350</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary p-0.5 rounded-full mt-1">
+<div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+<i class="ri-map-pin-line ri-lg text-primary"></i>
+</div>
+</div>
+<div class="ml-4">
+<h4 class="font-medium text-gray-900">Location</h4>
+<p class="text-gray-600">450 SW Marine Dr, Vancouver, BC, Canada</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-gray-50 rounded-lg p-8 shadow-sm">
+<form>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div>
+<label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name <span class="text-red-500">*</span></label>
+<input type="text" id="firstName" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="John">
+<div id="firstNameError" class="text-red-500 text-sm mt-1 hidden"></div>
+</div>
+<div>
+<label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name <span class="text-red-500">*</span></label>
+<input type="text" id="lastName" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Smith">
+<div id="lastNameError" class="text-red-500 text-sm mt-1 hidden"></div>
+</div>
+</div>
+<div class="mb-6">
+<label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address <span class="text-red-500">*</span></label>
+<input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="john@example.com">
+<div id="emailError" class="text-red-500 text-sm mt-1 hidden"></div>
+</div>
+<div class="mb-6">
+<label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+<input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="(647) 555-1234">
+<div id="phoneError" class="text-red-500 text-sm mt-1 hidden"></div>
+</div>
+<div class="mb-6">
+<label for="business" class="block text-sm font-medium text-gray-700 mb-1">Business Name <span class="text-red-500">*</span></label>
+<input type="text" id="business" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Your Business Name">
+<div id="businessError" class="text-red-500 text-sm mt-1 hidden"></div>
+</div>
+<div class="mb-6">
+<label for="message" class="block text-sm font-medium text-gray-700 mb-1">How can we help? <span class="text-red-500">*</span></label>
+<textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Tell us about your bookkeeping needs..."></textarea>
+<div id="messageError" class="text-red-500 text-sm mt-1 hidden"></div>
+</div>
+<button type="submit" id="contactSubmitBtn" class="w-full bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:opacity-90 transition-all font-medium">Send Message</button>
+<div id="formMessage" class="mt-4 text-center hidden"></div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- Column 1: Company Info -->
+<div>
+<div class="mb-4">
+<a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/50e7931b-7d6c-4612-9474-b188a61a113d" data-readdy="true">
+<span class="text-3xl font-['Pacifico'] text-white">FinCore</span>
+</a>
+</div>
+<p class="text-gray-400 mb-6">Affordable and hassle-free bookkeeping services for Canadian small businesses. 100% Canadian owned and operated.</p>
+<div class="flex space-x-2 mb-4">
+<span class="bg-primary bg-opacity-20 text-primary px-2 py-0.5 rounded-full text-xs">Professional</span>
+<span class="bg-primary bg-opacity-20 text-primary px-2 py-0.5 rounded-full text-xs">Reliable</span>
+<span class="bg-primary bg-opacity-20 text-primary px-2 py-0.5 rounded-full text-xs">Affordable</span>
+</div>
+<div class="space-y-2 mb-6">
+<div class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-mail-line"></i>
+</div>
+<span class="ml-2 text-gray-400">sales@fin-core.com</span>
+</div>
+<div class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-phone-line"></i>
+</div>
+<span class="ml-2 text-gray-400">(604) 239-3350</span>
+</div>
+</div>
+<div class="flex space-x-4">
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-all">
+<i class="ri-facebook-fill text-white"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-all">
+<i class="ri-twitter-x-fill text-white"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-all">
+<i class="ri-linkedin-fill text-white"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-all">
+<i class="ri-instagram-fill text-white"></i>
+</a>
+</div>
+</div>
+<!-- Column 2: Services -->
+<div>
+<h3 class="text-lg font-semibold mb-6">Services</h3>
+<ul class="space-y-3" id="footer-services">
+<!-- Footer services will be rendered here -->
+</ul>
+</div>
+<!-- Column 3: Industry Solutions -->
+<div>
+<h3 class="text-lg font-semibold mb-6">Industry Solutions</h3>
+<ul class="space-y-3" id="footer-industries">
+<!-- Footer industries will be rendered here -->
+</ul>
+</div>
+<!-- Column 4: Resources & Legal -->
+<div>
+<h3 class="text-lg font-semibold mb-6">Resources & Legal</h3>
+<ul class="space-y-3">
+<li><a href="#faq" class="text-gray-400 hover:text-white transition-all">FAQ</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-all">Blog</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-all">Resources</a></li>
+<li><a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/94b8b131-c9bc-4df1-96d8-9f04c07948ce" data-readdy="true" class="text-gray-400 hover:text-white transition-all">Privacy Policy</a></li>
+<li><a href="https://readdy.ai/home/9eddbcf3-612f-45d4-95d2-5b2c870553e5/4b079ca5-f170-4838-bb86-af62b4948bf2" data-readdy="true" class="text-gray-400 hover:text-white transition-all">Terms of Service</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-all">Site Map</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+<div class="mb-4 md:mb-0 text-gray-400 text-sm">
+© 2025 FinCore. All rights reserved. <span class="ml-2 bg-primary text-white px-2 py-0.5 rounded-full text-xs">Made in Canada</span>
+</div>
+<div class="flex space-x-4">
+<div class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-visa-line ri-lg"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-mastercard-line ri-lg"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-paypal-line ri-lg"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-secure-payment-line ri-lg"></i>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+// Mock data for services
+const services = [
+{
+icon: 'ri-book-open-line',
+title: 'Monthly Bookkeeping Services',
+description: 'Stay on top of your finances with our monthly bookkeeping services. We handle the day-to-day financial tasks, delivering accurate and timely reports to support your business growth.'
+},
+{
+icon: 'ri-money-dollar-circle-line',
+title: 'Payroll Services',
+description: 'Outsource your payroll processing to DataSavvY and experience hassle-free payroll management. From accurate calculations to timely payments, we handle all aspects of payroll.'
+},
+{
+icon: 'ri-exchange-funds-line',
+title: 'Accounts Payable & Receivable',
+description: 'Efficient management of accounts payable and receivable is crucial for healthy cash flow. Our dedicated team manages your invoicing, payments, and collections.'
+},
+{
+icon: 'ri-file-list-3-line',
+title: 'Tax Filing / Audit Compliance',
+description: 'Preparing for an audit can be daunting, but with DataSavvY, you can be confident in the accuracy and completeness of your financial records for a smooth audit process.'
+},
+{
+icon: 'ri-time-line',
+title: 'Catch Up Bookkeeping',
+description: 'Behind on your books? Our catch-up bookkeeping services will bring your financial records up to date quickly and accurately, no matter how far behind you are.'
+},
+{
+icon: 'ri-customer-service-2-line',
+title: 'Professional Services',
+description: 'Custom financial solutions tailored to your specific business needs. Our team of experts provides specialized services to address your unique financial challenges.'
+}
+];
+// Mock data for pricing plans
+const pricingPlans = [
+{
+name: 'Starter',
+price: '299',
+period: 'per month',
+description: 'Perfect for new and small businesses with basic bookkeeping needs.',
+features: [
+'Monthly bookkeeping',
+'Financial statements',
+'Bank reconciliation',
+'Individual or small business < 300k revenue ',
+'Basic financial reporting',
+'Dedicated bookkeeper'
+],
+cta: 'Get Started',
+popular: false
+},
+{
+name: 'Professional',
+price: '499',
+period: 'per month',
+description: 'Ideal for growing businesses with moderate transaction volume.',
+features: [
+'Everything in Starter',
+'Unlimited transactions',
+'Small businesses < 1 million in revenue ',
+'Dedicates bookkeeper support',
+'Monthly financial review call',
+'Priority email & phone support'
+],
+cta: 'Get Started',
+popular: true
+},
+{
+name: 'Enterprise',
+price: '899',
+period: 'per month',
+description: 'Comprehensive solution for established businesses with complex needs.',
+features: [
+'Everything in Professional',
+'Unlimited transactions ',
+'Multiple currency accounts ',
+'Small businesses < 5 million in revenue',
+'Advanced financial reporting',
+'Dedicated bookkeeper',
+'Quarterly business review'
+],
+cta: 'Get Started',
+popular: false
+}
+];
+// Mock data for add-on services
+const addonServices = [
+{
+icon: 'ri-file-paper-2-line',
+title: 'Tax Filing',
+price: ''
+},
+{
+icon: 'ri-government-line',
+title: 'GST/PST/QST Filing',
+price: ''
+},
+{
+icon: 'ri-user-settings-line',
+title: 'Professional Services',
+price: ''
+},
+{
+icon: 'ri-money-dollar-box-line',
+title: 'Accounts Receivable & Payable',
+price: 'From 199'
+},
+{
+icon: 'ri-bill-line',
+title: 'Invoicing & Collection',
+price: 'From 199'
+},
+{
+icon: 'ri-file-chart-line',
+title: 'Financial Analysis',
+price: ''
+}
+];
+// Mock data for FAQ
+const faqs = [
+{
+question: 'What bookkeeping services do you offer?',
+answer: 'We offer a comprehensive range of bookkeeping services including monthly bookkeeping, payroll processing, accounts payable and receivable management, tax filing preparation, audit compliance, and catch-up bookkeeping for businesses that have fallen behind.'
+},
+{
+question: 'How does your pricing work?',
+answer: 'We offer fixed monthly pricing based on your business size and transaction volume. Our transparent pricing ensures there are no surprise costs. You\'ll know exactly what you\'re paying for each month with no hidden fees.'
+},
+{
+question: 'What accounting software do you work with?',
+answer: 'Our team is proficient with popular accounting software including QuickBooks and Xero. We can work with your existing system or help you set up a new one that best fits your business needs.'
+},
+{
+question: 'How do I share my financial documents with you?',
+answer: 'We provide a secure client portal where you can upload your financial documents. We also offer integration with your bank accounts and other financial platforms for seamless data transfer.'
+},
+{
+question: 'What if I\'m behind on my bookkeeping?',
+answer: 'Our catch-up bookkeeping service is designed specifically for businesses that have fallen behind. We\'ll work efficiently to bring your books up to date, no matter how far behind you are.'
+},
+{
+question: 'Is my financial data secure with FinCore?',
+answer: 'Absolutely. We use bank-level encryption and security protocols to protect your financial data. All our systems are regularly audited for security compliance, and we maintain strict confidentiality standards.'
+}
+];
+// Mock data for footer services
+const footerServices = [
+'Monthly Bookkeeping',
+'Payroll Services',
+'Tax Filing & Audit',
+'Catch Up Bookkeeping',
+'Professional Services',
+'Accounts Payable/Receivable'
+];
+// Mock data for footer industries
+const footerIndustries = [
+'Plumbers & HVAC',
+'Electricians',
+'Realtors & Real Estate',
+'Startups & Tech',
+'Restaurants & Hospitality',
+'Construction & Contractors',
+'Medical & Healthcare',
+'E-commerce & Retail',
+'Professional Services'
+];
+// Mock data for testimonials
+const testimonials = [
+{
+name: 'Sarah Johnson',
+position: 'Owner, Bright Spark Electrical',
+image: 'https://public.readdy.ai/ai/img_res/21feff381b95b9b2bf3bb1d31e0dba6e.jpg',
+quote: 'FinCore transformed our bookkeeping process. Their team is responsive, detail-oriented, and has saved us countless hours each month. I can now focus on growing my business instead of worrying about the books.'
+},
+{
+name: 'Michael Chen',
+position: 'Founder, TechNova Solutions',
+image: 'https://public.readdy.ai/ai/img_res/d8cb6a4d190d09bc95884da405a151d7.jpg',
+quote: 'As a startup founder, I needed reliable bookkeeping that could scale with my business. FinCore has been the perfect partner - they understand our unique needs and provide insights that have helped us make better financial decisions.'
+},
+{
+name: 'Olivia Rodriguez',
+position: 'Director, Gourmet Eats Restaurant',
+image: 'https://public.readdy.ai/ai/img_res/cc57d92f073c2be70bd757ba1c6747f2.jpg',
+quote: 'The restaurant industry has tight margins and complex bookkeeping needs. FinCore has been instrumental in helping us track our finances accurately, manage cash flow, and prepare for tax season without stress.'
+},
+{
+name: 'David Thompson',
+position: 'CEO, BuildRight Construction',
+image: 'https://public.readdy.ai/ai/img_res/30d2a35258ff6c495c94f3b7fc9ef236.jpg',
+quote: 'Managing multiple projects with different timelines made our bookkeeping a nightmare. Since partnering with FinCore, we have clear financial visibility across all projects and have improved our profitability by 15%.'
+},
+{
+name: 'Jennifer Williams',
+position: 'Dentist, Bright Smile Dental',
+image: 'https://public.readdy.ai/ai/img_res/2b0e15c563dc377f539b3dd217dd1205.jpg',
+quote: 'FinCore understands the unique financial aspects of running a dental practice. Their attention to detail and proactive approach has helped us streamline our operations and focus more on patient care.'
+},
+{
+name: 'Robert Patel',
+position: 'Owner, Cornerstone Retail',
+image: 'https://public.readdy.ai/ai/img_res/7ebd243498bc8f1491bc6c13ad107771.jpg',
+quote: 'The seasonal nature of retail makes accurate bookkeeping essential. FinCore has helped us navigate busy periods with ease, providing timely financial reports that help us make inventory and staffing decisions with confidence.'
+}
+];
+// Render services
+document.getElementById('services-container').innerHTML = services.map(service => `
+<div class="service-card bg-white p-8 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
+<div class="w-14 h-14 flex items-center justify-center bg-primary p-0.5 rounded-lg mb-6">
+<div class="w-full h-full bg-white rounded-lg flex items-center justify-center">
+<i class="${service.icon} ri-2x text-primary"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">${service.title}</h3>
+<p class="text-gray-600">${service.description}</p>
+</div>
+`).join('');
+// Render pricing plans
+document.getElementById('pricing-container').innerHTML = pricingPlans.map(plan => `
+<div class="bg-white rounded-lg shadow-sm overflow-hidden ${plan.popular ? 'ring-2 ring-primary' : 'border border-gray-200'}">
+${plan.popular ? '<div class="bg-primary text-white text-center py-2 text-sm font-medium">Most Popular</div>' : ''}
+<div class="p-8">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">${plan.name}</h3>
+<div class="flex items-baseline mb-4">
+<span class="text-3xl font-bold text-gray-900">${plan.price.replace('$', '')}</span>
+<span class="text-gray-500 ml-1">${plan.period}</span>
+</div>
+<p class="text-gray-600 mb-6">${plan.description}</p>
+<ul class="space-y-3 mb-8">
+${plan.features.map(feature => `
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center bg-green-500 rounded-full mt-0.5">
+<i class="ri-check-line text-white text-xs"></i>
+</div>
+<span class="ml-2 text-gray-600">${feature}</span>
+</li>
+`).join('')}
+</ul>
+<a href="#contact" class="block w-full text-center ${plan.popular ? 'bg-primary text-white' : 'bg-gray-100 text-gray-800'} px-6 py-3 !rounded-button whitespace-nowrap hover:opacity-90 transition-all font-medium">${plan.cta}</a>
+</div>
+</div>
+`).join('');
+// Render add-on services
+document.getElementById('addon-services').innerHTML = addonServices.map(addon => `
+<div class="flex items-center bg-white p-4 rounded shadow-sm">
+<div class="w-10 h-10 flex items-center justify-center bg-primary p-0.5 rounded-full mr-4">
+<div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+<i class="${addon.icon} text-primary"></i>
+</div>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">${addon.title}</h4>
+<p class="text-sm text-gray-600">${addon.price === 'From 199' ? '' : addon.price}</p>
+</div>
+</div>
+`).join('');
+// Render FAQ
+document.getElementById('faq-container').innerHTML = faqs.map((faq, index) => `
+<div class="border-b border-gray-200 py-6 ${index === 0 ? 'border-t' : ''}">
+<button class="flex justify-between items-center w-full text-left focus:outline-none" onclick="toggleFaq(${index})">
+<h3 class="text-lg font-medium text-gray-900">${faq.question}</h3>
+<div class="w-6 h-6 flex items-center justify-center bg-primary rounded-full">
+<i class="ri-arrow-down-s-line faq-icon-${index} text-white text-xs"></i>
+</div>
+</button>
+<div class="mt-3 hidden faq-answer-${index}">
+<p class="text-gray-600">${faq.answer}</p>
+</div>
+</div>
+`).join('');
+// Render footer services
+document.getElementById('footer-services').innerHTML = footerServices.map(service => `
+<li><a href="#services" class="text-gray-400 hover:text-white transition-all">${service}</a></li>
+`).join('');
+// Render footer industries
+document.getElementById('footer-industries').innerHTML = footerIndustries.map(industry => `
+<li><a href="#" class="text-gray-400 hover:text-white transition-all">${industry}</a></li>
+`).join('');
+// Render testimonials
+document.getElementById('testimonials-container').innerHTML = testimonials.map(testimonial => `
+<div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+<div class="flex items-center mb-4">
+<img src="${testimonial.image}" alt="${testimonial.name}" class="w-16 h-16 rounded-full object-cover mr-4">
+<div>
+<h4 class="font-semibold text-gray-900">${testimonial.name}</h4>
+<p class="text-sm text-gray-600">${testimonial.position}</p>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-700 italic">"${testimonial.quote}"</p>
+</div>
+`).join('');
+// FAQ toggle function
+function toggleFaq(index) {
+const answer = document.querySelector(`.faq-answer-${index}`);
+const icon = document.querySelector(`.faq-icon-${index}`);
+if (answer.classList.contains('hidden')) {
+answer.classList.remove('hidden');
+icon.classList.remove('ri-arrow-down-s-line');
+icon.classList.add('ri-arrow-up-s-line');
+} else {
+answer.classList.add('hidden');
+icon.classList.remove('ri-arrow-up-s-line');
+icon.classList.add('ri-arrow-down-s-line');
+}
+}
+// Make toggleFaq available globally
+window.toggleFaq = toggleFaq;
+// Mobile menu toggle function
+function toggleMobileMenu() {
+const mobileMenu = document.getElementById('mobile-menu');
+if (mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.remove('hidden');
+} else {
+mobileMenu.classList.add('hidden');
+}
+}
+// Make toggleMobileMenu available globally
+window.toggleMobileMenu = toggleMobileMenu;
+// Contact form validation and submission
+document.addEventListener('DOMContentLoaded', function() {
+// Add event listener to the contact form submit button
+const contactSubmitBtn = document.getElementById('contactSubmitBtn');
+const formMessage = document.getElementById('formMessage');
+if (contactSubmitBtn) {
+contactSubmitBtn.addEventListener('click', function(e) {
+e.preventDefault();
+// Create error elements if they don't exist
+const formFields = ['firstName', 'lastName', 'email', 'phone', 'business', 'message'];
+formFields.forEach(field => {
+if (!document.getElementById(`${field}Error`)) {
+const input = document.getElementById(field);
+if (input) {
+const errorDiv = document.createElement('div');
+errorDiv.id = `${field}Error`;
+errorDiv.className = 'text-red-500 text-sm mt-1 hidden';
+input.parentNode.insertBefore(errorDiv, input.nextSibling);
+}
+}
+});
+// Reset previous error messages
+document.querySelectorAll('[id$="Error"]').forEach(el => {
+el.classList.add('hidden');
+el.textContent = '';
+});
+// Reset input border colors
+formFields.forEach(field => {
+const input = document.getElementById(field);
+if (input) {
+input.classList.remove('border-red-500');
+input.classList.add('border-gray-300');
+}
+});
+// Get form fields
+const firstName = document.getElementById('firstName');
+const lastName = document.getElementById('lastName');
+const email = document.getElementById('email');
+const phone = document.getElementById('phone');
+const business = document.getElementById('business');
+const message = document.getElementById('message');
+// Validation flag
+let isValid = true;
+// Validate required fields
+if (!firstName || !firstName.value.trim()) {
+showError('firstName', 'First name is required');
+isValid = false;
+}
+if (!lastName || !lastName.value.trim()) {
+showError('lastName', 'Last name is required');
+isValid = false;
+}
+if (!email || !email.value.trim()) {
+showError('email', 'Email address is required');
+isValid = false;
+} else if (!isValidEmail(email.value.trim())) {
+showError('email', 'Please enter a valid email address');
+isValid = false;
+}
+if (!business || !business.value.trim()) {
+showError('business', 'Business name is required');
+isValid = false;
+}
+if (!message || !message.value.trim()) {
+showError('message', 'Please tell us how we can help you');
+isValid = false;
+}
+// If form is valid, submit it
+if (isValid) {
+// Show loading state
+contactSubmitBtn.disabled = true;
+contactSubmitBtn.innerHTML = '<i class="ri-loader-4-line animate-spin mr-2"></i> Sending...';
+// Simulate form submission (replace with actual API call)
+setTimeout(() => {
+try {
+// Show success message
+if (formMessage) {
+formMessage.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+formMessage.classList.add('bg-green-100', 'text-green-700', 'p-4', 'rounded');
+formMessage.innerHTML = '<i class="ri-check-line mr-2"></i> Thank you for your message! We\'ll get back to you within 24 hours.';
+}
+// Reset form fields
+formFields.forEach(field => {
+const input = document.getElementById(field);
+if (input) {
+input.value = '';
+}
+});
+// Replace form with success message after a delay
+setTimeout(() => {
+const formContainer = contactSubmitBtn.closest('.bg-gray-50.rounded-lg.p-8.shadow-sm');
+if (formContainer) {
+formContainer.innerHTML = `
+<div class="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
+<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-check-line ri-2x text-green-500"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Thank You!</h3>
+<p class="text-gray-600 mb-6">Your message has been sent successfully. One of our bookkeeping experts will contact you within 24 hours.</p>
+<button type="button" onclick="resetContactForm()" class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:opacity-90 transition-all font-medium">Send Another Message</button>
+</div>
+`;
+}
+}, 2000);
+} catch (error) {
+// Handle submission error
+if (formMessage) {
+formMessage.classList.remove('hidden', 'bg-green-100', 'text-green-700');
+formMessage.classList.add('bg-red-100', 'text-red-700', 'p-4', 'rounded');
+formMessage.innerHTML = '<i class="ri-error-warning-line mr-2"></i> There was an error sending your message. Please try again later.';
+}
+// Reset button state
+contactSubmitBtn.disabled = false;
+contactSubmitBtn.innerHTML = 'Send Message';
+}
+}, 1500);
+}
+});
+}
+// Helper function to show error message
+function showError(fieldId, message) {
+const errorElement = document.getElementById(`${fieldId}Error`);
+const inputElement = document.getElementById(fieldId);
+if (errorElement) {
+errorElement.textContent = message;
+errorElement.classList.remove('hidden');
+}
+if (inputElement) {
+inputElement.classList.remove('border-gray-300');
+inputElement.classList.add('border-red-500');
+inputElement.focus();
+}
+}
+// Helper function to validate email
+function isValidEmail(email) {
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+return emailRegex.test(email);
+}
+});
+// Function to reset contact form after submission
+window.resetContactForm = function() {
+const contactFormContainer = document.querySelector('.bg-gray-50.rounded-lg.p-8.shadow-sm');
+if (contactFormContainer) {
+contactFormContainer.innerHTML = `
+<form>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div>
+<label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name <span class="text-red-500">*</span></label>
+<input type="text" id="firstName" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="John">
+<div id="firstNameError" class="text-red-500 text-sm mt-1 hidden"></div>
+</div>
+<div>
+<label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name <span class="text-red-500">*</span></label>
+<input type="text" id="lastName" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Smith">
+<div id="lastNameError" class="text-red-500 text-sm mt-1 hidden"></div>
+</div>
+</div>
+<div class="mb-6">
+<label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address <span class="text-red-500">*</span></label>
+<input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="john@example.com">
+<div id="emailError" class="text-red-500 text-sm mt-1 hidden"></div>
+</div>
+<div class="mb-6">
+<label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+<input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="(647) 555-1234">
+<div id="phoneError" class="text-red-500 text-sm mt-1 hidden"></div>
+</div>
+<div class="mb-6">
+<label for="business" class="block text-sm font-medium text-gray-700 mb-1">Business Name <span class="text-red-500">*</span></label>
+<input type="text" id="business" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Your Business Name">
+<div id="businessError" class="text-red-500 text-sm mt-1 hidden"></div>
+</div>
+<div class="mb-6">
+<label for="message" class="block text-sm font-medium text-gray-700 mb-1">How can we help? <span class="text-red-500">*</span></label>
+<textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Tell us about your bookkeeping needs..."></textarea>
+<div id="messageError" class="text-red-500 text-sm mt-1 hidden"></div>
+</div>
+<button type="submit" id="contactSubmitBtn" class="w-full bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:opacity-90 transition-all font-medium">Send Message</button>
+<div id="formMessage" class="mt-4 text-center hidden"></div>
+</form>
+`;
+// Re-attach event listener to the new submit button
+const newContactSubmitBtn = document.getElementById('contactSubmitBtn');
+if (newContactSubmitBtn) {
+newContactSubmitBtn.addEventListener('click', function(e) {
+e.preventDefault();
+// Reset previous error messages
+document.querySelectorAll('[id$="Error"]').forEach(el => {
+el.classList.add('hidden');
+el.textContent = '';
+});
+// Reset input border colors
+const formFields = ['firstName', 'lastName', 'email', 'phone', 'business', 'message'];
+formFields.forEach(field => {
+const input = document.getElementById(field);
+if (input) {
+input.classList.remove('border-red-500');
+input.classList.add('border-gray-300');
+}
+});
+// Get form fields
+const firstName = document.getElementById('firstName');
+const lastName = document.getElementById('lastName');
+const email = document.getElementById('email');
+const phone = document.getElementById('phone');
+const business = document.getElementById('business');
+const message = document.getElementById('message');
+// Validation flag
+let isValid = true;
+// Validate required fields
+if (!firstName || !firstName.value.trim()) {
+showError('firstName', 'First name is required');
+isValid = false;
+}
+if (!lastName || !lastName.value.trim()) {
+showError('lastName', 'Last name is required');
+isValid = false;
+}
+if (!email || !email.value.trim()) {
+showError('email', 'Email address is required');
+isValid = false;
+} else if (!isValidEmail(email.value.trim())) {
+showError('email', 'Please enter a valid email address');
+isValid = false;
+}
+if (!business || !business.value.trim()) {
+showError('business', 'Business name is required');
+isValid = false;
+}
+if (!message || !message.value.trim()) {
+showError('message', 'Please tell us how we can help you');
+isValid = false;
+}
+// If form is valid, submit it
+if (isValid) {
+// Show loading state
+newContactSubmitBtn.disabled = true;
+newContactSubmitBtn.innerHTML = '<i class="ri-loader-4-line animate-spin mr-2"></i> Sending...';
+const formMessage = document.getElementById('formMessage');
+// Simulate form submission (replace with actual API call)
+setTimeout(() => {
+try {
+// Show success message
+if (formMessage) {
+formMessage.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+formMessage.classList.add('bg-green-100', 'text-green-700', 'p-4', 'rounded');
+formMessage.innerHTML = '<i class="ri-check-line mr-2"></i> Thank you for your message! We\'ll get back to you within 24 hours.';
+}
+// Reset form fields
+formFields.forEach(field => {
+const input = document.getElementById(field);
+if (input) {
+input.value = '';
+}
+});
+// Replace form with success message after a delay
+setTimeout(() => {
+const formContainer = newContactSubmitBtn.closest('form').parentNode;
+if (formContainer) {
+formContainer.innerHTML = `
+<div class="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
+<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-check-line ri-2x text-green-500"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Thank You!</h3>
+<p class="text-gray-600 mb-6">Your message has been sent successfully. One of our bookkeeping experts will contact you within 24 hours.</p>
+<button type="button" onclick="resetContactForm()" class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:opacity-90 transition-all font-medium">Send Another Message</button>
+</div>
+`;
+}
+}, 2000);
+} catch (error) {
+// Handle submission error
+if (formMessage) {
+formMessage.classList.remove('hidden', 'bg-green-100', 'text-green-700');
+formMessage.classList.add('bg-red-100', 'text-red-700', 'p-4', 'rounded');
+formMessage.innerHTML = '<i class="ri-error-warning-line mr-2"></i> There was an error sending your message. Please try again later.';
+}
+// Reset button state
+newContactSubmitBtn.disabled = false;
+newContactSubmitBtn.innerHTML = 'Send Message';
+}
+}, 1500);
+}
+});
+}
+}
+// Helper function to show error message
+function showError(fieldId, message) {
+const errorElement = document.getElementById(`${fieldId}Error`);
+const inputElement = document.getElementById(fieldId);
+if (errorElement) {
+errorElement.textContent = message;
+errorElement.classList.remove('hidden');
+}
+if (inputElement) {
+inputElement.classList.remove('border-gray-300');
+inputElement.classList.add('border-red-500');
+inputElement.focus();
+}
+}
+// Helper function to validate email
+function isValidEmail(email) {
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+return emailRegex.test(email);
+}
+};
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+// Close mobile menu if open
+const mobileMenu = document.getElementById('mobile-menu');
+if (!mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.add('hidden');
+}
+const targetId = this.getAttribute('href');
+if (targetId === '#') return; // Skip if href is just "#"
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+targetElement.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+}
+});
+});
+</script>
+</body>
+</html>
