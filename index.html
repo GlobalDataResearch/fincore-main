@@ -24,6 +24,35 @@ transform: translateY(-5px);
 box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 </style>
+<script>
+window.WEB3FORMS_ACCESS_KEY = '44c9b9f1-8ee7-46fa-826a-ce81517ca96b';
+function fincoreWeb3formsSubmit(fields) {
+var payload = Object.assign({}, fields, { access_key: window.WEB3FORMS_ACCESS_KEY });
+var req = fetch('https://api.web3forms.com/submit', {
+method: 'POST',
+headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+body: JSON.stringify(payload)
+}).then(function(response) {
+return response.json().then(function(data) {
+if (!response.ok) {
+throw new Error((data && data.message) || ('HTTP ' + response.status));
+}
+if (!data || data.success === false || data.success === 'false') {
+throw new Error((data && data.message) || 'Submission was not accepted');
+}
+return data;
+});
+});
+return Promise.race([
+req,
+new Promise(function(_, reject) {
+setTimeout(function() {
+reject(new Error('Request timed out. Check your connection and try again.'));
+}, 25000);
+})
+]);
+}
+</script>
 </head>
 <body class="bg-gray-50">
 <!-- Header Navigation -->
@@ -201,7 +230,7 @@ box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 
 </div>
 <div class="ml-4">
 <h4 class="font-medium text-gray-900">Email Us</h4>
-<p class="text-gray-600">sales@fin-core.com</p>
+<p class="text-gray-600">books.fincore@gmail.com</p>
 </div>
 </div>
 <div class="flex items-start">
@@ -228,7 +257,7 @@ box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 
 </div>
 </div>
 </div>
-<div class="bg-gray-50 rounded-lg p-8 shadow-sm">
+<div id="contact-form-panel" class="bg-gray-50 rounded-lg p-8 shadow-sm">
 <form>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div>
@@ -291,7 +320,7 @@ box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 
 <div class="w-5 h-5 flex items-center justify-center text-gray-400">
 <i class="ri-mail-line"></i>
 </div>
-<span class="ml-2 text-gray-400">sales@fin-core.com</span>
+<span class="ml-2 text-gray-400">books.fincore@gmail.com</span>
 </div>
 <div class="flex items-center">
 <div class="w-5 h-5 flex items-center justify-center text-gray-400">
@@ -402,7 +431,7 @@ description: 'Custom financial solutions tailored to your specific business need
 const pricingPlans = [
 {
 name: 'Starter',
-price: '299',
+price: '$299',
 period: 'per month',
 description: 'Perfect for new and small businesses with basic bookkeeping needs.',
 features: [
@@ -418,7 +447,7 @@ popular: false
 },
 {
 name: 'Professional',
-price: '499',
+price: '$499',
 period: 'per month',
 description: 'Ideal for growing businesses with moderate transaction volume.',
 features: [
@@ -434,7 +463,7 @@ popular: true
 },
 {
 name: 'Enterprise',
-price: '899',
+price: '$899',
 period: 'per month',
 description: 'Comprehensive solution for established businesses with complex needs.',
 features: [
@@ -589,7 +618,7 @@ ${plan.popular ? '<div class="bg-primary text-white text-center py-2 text-sm fon
 <div class="p-8">
 <h3 class="text-xl font-semibold text-gray-900 mb-2">${plan.name}</h3>
 <div class="flex items-baseline mb-4">
-<span class="text-3xl font-bold text-gray-900">${plan.price.replace('$', '')}</span>
+<span class="text-3xl font-bold text-gray-900">${plan.price}</span>
 <span class="text-gray-500 ml-1">${plan.period}</span>
 </div>
 <p class="text-gray-600 mb-6">${plan.description}</p>
@@ -761,12 +790,25 @@ isValid = false;
 }
 // If form is valid, submit it
 if (isValid) {
+var submitSucceeded = false;
+var fullName = firstName.value.trim() + ' ' + lastName.value.trim();
 // Show loading state
 contactSubmitBtn.disabled = true;
 contactSubmitBtn.innerHTML = '<i class="ri-loader-4-line animate-spin mr-2"></i> Sending...';
-// Simulate form submission (replace with actual API call)
-setTimeout(() => {
-try {
+// Send form data via Web3Forms
+fincoreWeb3formsSubmit({
+subject: 'New contact — FinCore (main site)',
+name: fullName,
+from_name: fullName,
+email: email.value.trim(),
+phone: phone ? phone.value.trim() : '',
+business: business.value.trim(),
+message: message.value.trim(),
+firstName: firstName.value.trim(),
+lastName: lastName.value.trim()
+})
+.then(function() {
+submitSucceeded = true;
 // Show success message
 if (formMessage) {
 formMessage.classList.remove('hidden', 'bg-red-100', 'text-red-700');
@@ -782,7 +824,7 @@ input.value = '';
 });
 // Replace form with success message after a delay
 setTimeout(() => {
-const formContainer = contactSubmitBtn.closest('.bg-gray-50.rounded-lg.p-8.shadow-sm');
+const formContainer = document.getElementById('contact-form-panel');
 if (formContainer) {
 formContainer.innerHTML = `
 <div class="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
@@ -796,18 +838,24 @@ formContainer.innerHTML = `
 `;
 }
 }, 2000);
-} catch (error) {
-// Handle submission error
+})
+.catch(error => {
+console.error('Error:', error);
+var msg = (error && error.message) ? error.message : 'There was an error sending your message. Please try again later.';
 if (formMessage) {
 formMessage.classList.remove('hidden', 'bg-green-100', 'text-green-700');
 formMessage.classList.add('bg-red-100', 'text-red-700', 'p-4', 'rounded');
-formMessage.innerHTML = '<i class="ri-error-warning-line mr-2"></i> There was an error sending your message. Please try again later.';
+formMessage.innerHTML = '<i class="ri-error-warning-line mr-2"></i> ' + msg;
 }
-// Reset button state
-contactSubmitBtn.disabled = false;
-contactSubmitBtn.innerHTML = 'Send Message';
+})
+.finally(function() {
+if (submitSucceeded) return;
+var btn = document.getElementById('contactSubmitBtn');
+if (btn) {
+btn.disabled = false;
+btn.innerHTML = 'Send Message';
 }
-}, 1500);
+});
 }
 });
 }
@@ -833,7 +881,7 @@ return emailRegex.test(email);
 });
 // Function to reset contact form after submission
 window.resetContactForm = function() {
-const contactFormContainer = document.querySelector('.bg-gray-50.rounded-lg.p-8.shadow-sm');
+const contactFormContainer = document.getElementById('contact-form-panel');
 if (contactFormContainer) {
 contactFormContainer.innerHTML = `
 <form>
@@ -931,9 +979,18 @@ if (isValid) {
 newContactSubmitBtn.disabled = true;
 newContactSubmitBtn.innerHTML = '<i class="ri-loader-4-line animate-spin mr-2"></i> Sending...';
 const formMessage = document.getElementById('formMessage');
-// Simulate form submission (replace with actual API call)
-setTimeout(() => {
-try {
+// Send form data via Web3Forms
+fincoreWeb3formsSubmit({
+subject: 'New contact — FinCore (main site)',
+name: firstName.value.trim() + ' ' + lastName.value.trim(),
+email: email.value.trim(),
+phone: phone ? phone.value.trim() : '',
+business: business.value.trim(),
+message: message.value.trim(),
+firstName: firstName.value.trim(),
+lastName: lastName.value.trim()
+})
+.then(function() {
 // Show success message
 if (formMessage) {
 formMessage.classList.remove('hidden', 'bg-red-100', 'text-red-700');
@@ -949,7 +1006,7 @@ input.value = '';
 });
 // Replace form with success message after a delay
 setTimeout(() => {
-const formContainer = newContactSubmitBtn.closest('form').parentNode;
+const formContainer = document.getElementById('contact-form-panel');
 if (formContainer) {
 formContainer.innerHTML = `
 <div class="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
@@ -963,7 +1020,9 @@ formContainer.innerHTML = `
 `;
 }
 }, 2000);
-} catch (error) {
+})
+.catch(error => {
+console.error('Error:', error);
 // Handle submission error
 if (formMessage) {
 formMessage.classList.remove('hidden', 'bg-green-100', 'text-green-700');
@@ -973,8 +1032,7 @@ formMessage.innerHTML = '<i class="ri-error-warning-line mr-2"></i> There was an
 // Reset button state
 newContactSubmitBtn.disabled = false;
 newContactSubmitBtn.innerHTML = 'Send Message';
-}
-}, 1500);
+});
 }
 });
 }

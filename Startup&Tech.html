@@ -30,6 +30,35 @@ transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 transition: transform 0.3s ease;
 }
 </style>
+<script>
+window.WEB3FORMS_ACCESS_KEY = '44c9b9f1-8ee7-46fa-826a-ce81517ca96b';
+function fincoreWeb3formsSubmit(fields) {
+var payload = Object.assign({}, fields, { access_key: window.WEB3FORMS_ACCESS_KEY });
+var req = fetch('https://api.web3forms.com/submit', {
+method: 'POST',
+headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+body: JSON.stringify(payload)
+}).then(function(response) {
+return response.json().then(function(data) {
+if (!response.ok) {
+throw new Error((data && data.message) || ('HTTP ' + response.status));
+}
+if (!data || data.success === false || data.success === 'false') {
+throw new Error((data && data.message) || 'Submission was not accepted');
+}
+return data;
+});
+});
+return Promise.race([
+req,
+new Promise(function(_, reject) {
+setTimeout(function() {
+reject(new Error('Request timed out. Check your connection and try again.'));
+}, 25000);
+})
+]);
+}
+</script>
 </head>
 <body class="bg-white">
 <!-- Header Navigation -->
@@ -43,7 +72,7 @@ transition: transform 0.3s ease;
 <a href="#services" class="text-gray-700 hover:text-primary font-medium" data-readdy="true">Services</a>
 <a href="#pricing" class="text-gray-700 hover:text-primary font-medium" data-readdy="true">Pricing</a>
 <a href="#testimonials" class="text-gray-700 hover:text-primary font-medium">Testimonials</a>
-<a href="https://" class="text-gray-700 hover:text-primary font-medium" data-readdy="true">FAQ</a>
+<a href="#faq" class="text-gray-700 hover:text-primary font-medium" data-readdy="true">FAQ</a>
 <a href="#contact" class="text-gray-700 hover:text-primary font-medium">Contact</a>
 </nav>
 <div class="flex items-center space-x-4">
@@ -652,7 +681,7 @@ transition: transform 0.3s ease;
 </div>
 <div class="ml-4">
 <h4 class="font-medium text-gray-900">Email Us</h4>
-<p class="text-gray-600">sales@fincore.ca</p>
+<p class="text-gray-600">books.fincore@gmail.com</p>
 </div>
 </div>
 <div class="flex items-start">
@@ -679,35 +708,42 @@ transition: transform 0.3s ease;
 </div>
 </div>
 </div>
-<div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
-<form id="contactForm" onsubmit="event.preventDefault(); submitContactForm();">
+<div class="fincore-contact-card bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+<form id="contactForm" novalidate onsubmit="return false;">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div>
-<label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+<label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name <span class="text-red-500">*</span></label>
 <input type="text" id="firstName" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="John">
+<div id="firstNameError" class="text-red-500 text-sm mt-1 hidden"></div>
 </div>
 <div>
-<label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+<label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name <span class="text-red-500">*</span></label>
 <input type="text" id="lastName" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Smith">
+<div id="lastNameError" class="text-red-500 text-sm mt-1 hidden"></div>
 </div>
 </div>
 <div class="mb-6">
-<label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+<label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address <span class="text-red-500">*</span></label>
 <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="john@example.com">
+<div id="emailError" class="text-red-500 text-sm mt-1 hidden"></div>
 </div>
 <div class="mb-6">
 <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
 <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="(647) 555-1234">
+<div id="phoneError" class="text-red-500 text-sm mt-1 hidden"></div>
 </div>
 <div class="mb-6">
-<label for="business" class="block text-sm font-medium text-gray-700 mb-1">Business Name</label>
+<label for="business" class="block text-sm font-medium text-gray-700 mb-1">Business Name <span class="text-red-500">*</span></label>
 <input type="text" id="business" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Your Business Name">
+<div id="businessError" class="text-red-500 text-sm mt-1 hidden"></div>
 </div>
 <div class="mb-6">
-<label for="message" class="block text-sm font-medium text-gray-700 mb-1">How can we help?</label>
+<label for="message" class="block text-sm font-medium text-gray-700 mb-1">How can we help? <span class="text-red-500">*</span></label>
 <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Tell us about your bookkeeping needs..."></textarea>
+<div id="messageError" class="text-red-500 text-sm mt-1 hidden"></div>
 </div>
-<button type="submit" class="w-full bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:opacity-90 transition-all font-medium">Send Message</button>
+<button type="button" id="contactSubmitBtn" class="w-full bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:opacity-90 transition-all font-medium">Send Message</button>
+<div id="formMessage" class="mt-4 text-center hidden"></div>
 </form>
 </div>
 </div>
@@ -824,7 +860,7 @@ transition: transform 0.3s ease;
 <div class="w-5 h-5 flex items-center justify-center text-gray-400">
 <i class="ri-mail-line"></i>
 </div>
-<span class="ml-2 text-gray-400">sales@fincore.ca</span>
+<span class="ml-2 text-gray-400">books.fincore@gmail.com</span>
 </div>
 <div class="flex items-center">
 <div class="w-5 h-5 flex items-center justify-center text-gray-400">
@@ -883,8 +919,8 @@ transition: transform 0.3s ease;
 <li><a href="#faq" class="text-gray-400 hover:text-white transition-all">FAQ</a></li>
 <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-all">Testimonials</a></li>
 <li><a href="#contact" class="text-gray-400 hover:text-white transition-all">Resources</a></li>
-<li><a href="#contact" class="text-gray-400 hover:text-white transition-all">Privacy Policy</a></li>
-<li><a href="#contact" class="text-gray-400 hover:text-white transition-all">Terms of Service</a></li>
+<li><a href="FinCore-Terms-of-Service.html" class="text-gray-400 hover:text-white transition-all">Privacy Policy</a></li>
+<li><a href="FinCore-Terms-of-Service.html" class="text-gray-400 hover:text-white transition-all">Terms of Service</a></li>
 <li><a href="#" class="text-gray-400 hover:text-white transition-all">Site Map</a></li>
 </ul>
 </div>
@@ -1053,11 +1089,11 @@ answer: 'We help identify eligible R&D activities, document them properly, track
 },
 {
 question: 'What accounting software do you recommend for startups?',
-answer: 'We typically recommend Xero or QuickBooks Online for tech startups, often integrated with specialized tools like Stripe, ChartMogul for SaaS metrics, and Carta for equity management. We'll help you set up a tech stack that scales with your business.'
+answer: "We typically recommend Xero or QuickBooks Online for tech startups, often integrated with specialized tools like Stripe, ChartMogul for SaaS metrics, and Carta for equity management. We'll help you set up a tech stack that scales with your business."
 },
 {
 question: 'How do you handle remote teams and international operations?',
-answer: 'We're experienced with remote-first companies and international operations. We can help with multi-currency accounting, contractor payments across borders, international tax considerations, and consolidated reporting for companies with global subsidiaries.'
+answer: "We're experienced with remote-first companies and international operations. We can help with multi-currency accounting, contractor payments across borders, international tax considerations, and consolidated reporting for companies with global subsidiaries."
 },
 {
 question: 'What makes your bookkeeping services different from traditional accountants?',
@@ -1080,7 +1116,7 @@ question: 'What financial metrics do you track for tech startups?',
 answer: 'Beyond standard financial statements, we track tech-specific metrics including MRR/ARR, customer acquisition cost (CAC), lifetime value (LTV), churn rate, expansion revenue, gross margin, burn rate, runway, customer cohort analysis, and unit economics. We customize reporting based on your business model and growth stage.'
 },
 {
-question: 'How quickly can you get our books in order if they're currently a mess?',
+question: "How quickly can you get our books in order if they're currently a mess?",
 answer: 'Our catch-up bookkeeping service typically takes 2-4 weeks depending on complexity and transaction volume. We start with a thorough assessment, create a structured plan, implement proper categorization and reconciliation, and then establish ongoing processes to keep everything organized moving forward.'
 },
 {
@@ -1105,10 +1141,10 @@ answer: 'We ensure compliance with GST/HST, PST, and QST requirements across all
 },
 {
 question: 'How do you handle investor reporting requirements?',
-answer: 'We create customized reporting packages that align with your investors' expectations and requirements. This typically includes standard financial statements, cash flow analysis, burn rate and runway calculations, key performance metrics, and progress against financial milestones outlined in your funding agreements.'
+answer: "We create customized reporting packages that align with your investors' expectations and requirements. This typically includes standard financial statements, cash flow analysis, burn rate and runway calculations, key performance metrics, and progress against financial milestones outlined in your funding agreements."
 },
 {
-question: 'What's your onboarding process like?',
+question: "What's your onboarding process like?",
 answer: 'Our streamlined onboarding takes about 1-2 weeks and includes: an initial assessment of your current financial systems, setting up cloud accounting software and integrations, establishing your chart of accounts and reporting structure, importing historical data if needed, and training your team on processes for ongoing collaboration.'
 },
 {
@@ -1313,8 +1349,14 @@ answer.innerHTML = faqContents[index];
 }
 // Make toggleFaq available globally
 window.toggleFaq = toggleFaq;
-// Initialize FAQ items when page loads
+// Initialize FAQ items when page loads (contact form init runs first so it always registers)
 document.addEventListener('DOMContentLoaded', function() {
+try {
+setupStartupContactForm();
+} catch (contactErr) {
+console.error('FinCore contact form:', contactErr);
+}
+try {
 // Initialize all FAQ items to ensure they have the correct classes
 document.querySelectorAll('[class^="faq-answer-"]').forEach(item => {
 if (!item.classList.contains('hidden')) {
@@ -1346,10 +1388,14 @@ this.setAttribute('aria-expanded', !isExpanded);
 setTimeout(() => {
 toggleFaq(0);
 }, 500);
+} catch (faqErr) {
+console.error('FinCore FAQ init:', faqErr);
+}
 });
 // Mobile menu toggle function
 function toggleMobileMenu() {
 const mobileMenu = document.getElementById('mobile-menu');
+if (!mobileMenu) return;
 if (mobileMenu.classList.contains('hidden')) {
 mobileMenu.classList.remove('hidden');
 } else {
@@ -1385,20 +1431,17 @@ setTimeout(() => {
 scrollToSection(e, targetId);
 }, 300); // Small delay to allow menu to close first
 }
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+// Smooth scrolling for anchor links (matches index.html — bare "#" does not scroll to top)
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
 anchor.addEventListener('click', function (e) {
 e.preventDefault();
-const targetId = this.getAttribute('href');
-if (targetId === '#') {
-// If href is just "#", scroll to top
-window.scrollTo({
-top: 0,
-behavior: 'smooth'
-});
-return;
+var mobileMenu = document.getElementById('mobile-menu');
+if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.add('hidden');
 }
-const targetElement = document.querySelector(targetId);
+var targetId = this.getAttribute('href');
+if (targetId === '#') return;
+var targetElement = document.querySelector(targetId);
 if (targetElement) {
 targetElement.scrollIntoView({
 behavior: 'smooth',
@@ -1410,65 +1453,130 @@ block: 'start'
 // Make scrollToSection available globally
 window.scrollToSection = scrollToSection;
 window.scrollToSectionAndCloseMobile = scrollToSectionAndCloseMobile;
-// Contact form submission
-function submitContactForm() {
-const firstName = document.getElementById('firstName').value;
-const lastName = document.getElementById('lastName').value;
-const email = document.getElementById('email').value;
-const phone = document.getElementById('phone').value;
-const business = document.getElementById('business').value;
-const message = document.getElementById('message').value;
-// Form validation
-if (!firstName || !lastName || !email || !phone || !business || !message) {
-showFormMessage('Please fill in all fields', 'error');
-return;
+// Contact form — aligned with index.html (single submit handler, no input.focus() to avoid scroll jump)
+function setupStartupContactForm() {
+var form = document.getElementById('contactForm');
+if (!form || form.getAttribute('data-fincore-bound') === '1') return;
+form.setAttribute('data-fincore-bound', '1');
+function showError(fieldId, message) {
+var errorElement = document.getElementById(fieldId + 'Error');
+var inputElement = document.getElementById(fieldId);
+if (errorElement) {
+errorElement.textContent = message;
+errorElement.classList.remove('hidden');
 }
-// Email validation
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-if (!emailRegex.test(email)) {
-showFormMessage('Please enter a valid email address', 'error');
-return;
+if (inputElement) {
+inputElement.classList.remove('border-gray-300');
+inputElement.classList.add('border-red-500');
 }
-// Simulate form submission
-const formData = {
-firstName,
-lastName,
-email,
-phone,
-business,
-message
+}
+function isValidEmail(val) {
+return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+}
+form.addEventListener('submit', function(ev) {
+ev.preventDefault();
+});
+var contactSubmitBtn = document.getElementById('contactSubmitBtn');
+var formMessage = document.getElementById('formMessage');
+if (!contactSubmitBtn) return;
+contactSubmitBtn.addEventListener('click', function(e) {
+e.preventDefault();
+formMessage = document.getElementById('formMessage');
+var formFields = ['firstName', 'lastName', 'email', 'phone', 'business', 'message'];
+formFields.forEach(function(field) {
+if (!document.getElementById(field + 'Error')) {
+var inputEl = document.getElementById(field);
+if (inputEl) {
+var errorDiv = document.createElement('div');
+errorDiv.id = field + 'Error';
+errorDiv.className = 'text-red-500 text-sm mt-1 hidden';
+inputEl.parentNode.insertBefore(errorDiv, inputEl.nextSibling);
+}
+}
+});
+document.querySelectorAll('#contactForm [id$="Error"]').forEach(function(el) {
+el.classList.add('hidden');
+el.textContent = '';
+});
+formFields.forEach(function(field) {
+var input = document.getElementById(field);
+if (input) {
+input.classList.remove('border-red-500');
+input.classList.add('border-gray-300');
+}
+});
+var firstName = document.getElementById('firstName');
+var lastName = document.getElementById('lastName');
+var email = document.getElementById('email');
+var phone = document.getElementById('phone');
+var business = document.getElementById('business');
+var message = document.getElementById('message');
+var isValid = true;
+if (!firstName || !firstName.value.trim()) { showError('firstName', 'First name is required'); isValid = false; }
+if (!lastName || !lastName.value.trim()) { showError('lastName', 'Last name is required'); isValid = false; }
+if (!email || !email.value.trim()) { showError('email', 'Email address is required'); isValid = false; }
+else if (!isValidEmail(email.value.trim())) { showError('email', 'Please enter a valid email address'); isValid = false; }
+if (!business || !business.value.trim()) { showError('business', 'Business name is required'); isValid = false; }
+if (!message || !message.value.trim()) { showError('message', 'Please tell us how we can help you'); isValid = false; }
+if (!isValid) return;
+var submitSucceeded = false;
+contactSubmitBtn.disabled = true;
+contactSubmitBtn.innerHTML = '<i class="ri-loader-4-line animate-spin mr-2"></i> Sending...';
+var fullName = firstName.value.trim() + ' ' + lastName.value.trim();
+fincoreWeb3formsSubmit({
+subject: 'New contact — FinCore (Startup & Tech)',
+name: fullName,
+from_name: fullName,
+email: email.value.trim(),
+phone: phone ? phone.value.trim() : '',
+business: business.value.trim(),
+message: message.value.trim(),
+firstName: firstName.value.trim(),
+lastName: lastName.value.trim()
+})
+.then(function() {
+submitSucceeded = true;
+if (formMessage) {
+formMessage.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+formMessage.classList.add('bg-green-100', 'text-green-700', 'p-4', 'rounded');
+formMessage.innerHTML = '<i class="ri-check-line mr-2"></i> Thank you for your message! We\'ll get back to you within 24 hours.';
+}
+formFields.forEach(function(field) {
+var inp = document.getElementById(field);
+if (inp) inp.value = '';
+});
+setTimeout(function() {
+var formContainer = contactSubmitBtn.closest('.fincore-contact-card');
+if (formContainer) {
+formContainer.innerHTML = '<div class="bg-green-50 border border-green-200 rounded-lg p-8 text-center"><div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"><i class="ri-check-line ri-2x text-green-500"></i></div><h3 class="text-xl font-semibold text-gray-900 mb-2">Thank You!</h3><p class="text-gray-600 mb-6">Your message has been sent successfully. One of our bookkeeping experts will contact you within 24 hours.</p><button type="button" onclick="resetContactForm()" class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:opacity-90 transition-all font-medium">Send Another Message</button></div>';
+}
+}, 2000);
+})
+.catch(function(err) {
+console.error('Error:', err);
+var msg = (err && err.message) ? err.message : 'There was an error sending your message. Please try again later.';
+if (formMessage) {
+formMessage.classList.remove('hidden', 'bg-green-100', 'text-green-700');
+formMessage.classList.add('bg-red-100', 'text-red-700', 'p-4', 'rounded');
+formMessage.innerHTML = '<i class="ri-error-warning-line mr-2"></i> ' + msg;
+}
+})
+.finally(function() {
+if (submitSucceeded) return;
+var btn = document.getElementById('contactSubmitBtn');
+if (btn) {
+btn.disabled = false;
+btn.innerHTML = 'Send Message';
+}
+});
+});
+}
+window.resetContactForm = function() {
+var card = document.querySelector('.fincore-contact-card');
+if (!card) return;
+card.innerHTML = '<form id="contactForm" novalidate onsubmit="return false;"><div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"><div><label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name <span class="text-red-500">*</span></label><input type="text" id="firstName" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="John"><div id="firstNameError" class="text-red-500 text-sm mt-1 hidden"></div></div><div><label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name <span class="text-red-500">*</span></label><input type="text" id="lastName" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Smith"><div id="lastNameError" class="text-red-500 text-sm mt-1 hidden"></div></div></div><div class="mb-6"><label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address <span class="text-red-500">*</span></label><input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="john@example.com"><div id="emailError" class="text-red-500 text-sm mt-1 hidden"></div></div><div class="mb-6"><label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label><input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="(647) 555-1234"><div id="phoneError" class="text-red-500 text-sm mt-1 hidden"></div></div><div class="mb-6"><label for="business" class="block text-sm font-medium text-gray-700 mb-1">Business Name <span class="text-red-500">*</span></label><input type="text" id="business" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Your Business Name"><div id="businessError" class="text-red-500 text-sm mt-1 hidden"></div></div><div class="mb-6"><label for="message" class="block text-sm font-medium text-gray-700 mb-1">How can we help? <span class="text-red-500">*</span></label><textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Tell us about your bookkeeping needs..."></textarea><div id="messageError" class="text-red-500 text-sm mt-1 hidden"></div></div><button type="button" id="contactSubmitBtn" class="w-full bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:opacity-90 transition-all font-medium">Send Message</button><div id="formMessage" class="mt-4 text-center hidden"></div></form>';
+setupStartupContactForm();
 };
-console.log('Form submitted:', formData);
-// Clear form
-document.getElementById('contactForm').reset();
-// Show success message
-showFormMessage('Thank you! Your message has been sent. We\'ll get back to you within 24 hours.', 'success');
-}
-function showFormMessage(message, type) {
-// Create message element if it doesn't exist
-let messageEl = document.getElementById('form-message');
-if (!messageEl) {
-messageEl = document.createElement('div');
-messageEl.id = 'form-message';
-messageEl.className = 'mt-4 p-4 rounded text-center';
-document.getElementById('contactForm').appendChild(messageEl);
-}
-// Set message content and style
-messageEl.textContent = message;
-if (type === 'error') {
-messageEl.className = 'mt-4 p-4 rounded text-center bg-red-100 text-red-700';
-} else {
-messageEl.className = 'mt-4 p-4 rounded text-center bg-green-100 text-green-700';
-}
-// Auto-hide message after 5 seconds
-setTimeout(() => {
-messageEl.style.opacity = '0';
-messageEl.style.transition = 'opacity 0.5s ease';
-setTimeout(() => {
-messageEl.remove();
-}, 500);
-}, 5000);
-}
 </script>
 </body>
 </html>
