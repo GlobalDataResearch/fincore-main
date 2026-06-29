@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FinCore - Bookkeeping Services for Startups & Tech Companies</title>
+<title>FinBook - Bookkeeping Services for Startups & Tech Companies</title>
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
 <script>tailwind.config={theme:{extend:{colors:{primary:'#007a78',secondary:'#007a78'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,8 +32,13 @@ transition: transform 0.3s ease;
 </style>
 <script>
 window.WEB3FORMS_ACCESS_KEY = '44c9b9f1-8ee7-46fa-826a-ce81517ca96b';
-function fincoreWeb3formsSubmit(fields) {
-var payload = Object.assign({}, fields, { access_key: window.WEB3FORMS_ACCESS_KEY });
+function finbookWeb3formsSubmit(fields) {
+var senderEmail = fields.email || fields.replyto || '';
+var payload = Object.assign({}, fields, {
+access_key: window.WEB3FORMS_ACCESS_KEY,
+replyto: senderEmail,
+from_name: fields.from_name || fields.name || 'FinBook Website Visitor'
+});
 var req = fetch('https://api.web3forms.com/submit', {
 method: 'POST',
 headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -65,7 +70,7 @@ reject(new Error('Request timed out. Check your connection and try again.'));
 <header class="bg-white shadow-sm sticky top-0 z-50">
 <div class="container mx-auto px-4 py-3 flex justify-between items-center">
 <a href="#" class="flex items-center">
-<span class="text-3xl font-['Pacifico'] text-primary">FinCore</span>
+<span class="text-3xl font-['Pacifico'] text-primary">FinBook</span>
 </a>
 <nav class="hidden md:flex space-x-8">
 <a href="index.html" data-readdy="true" class="text-gray-700 hover:text-primary font-medium">Home</a>
@@ -106,7 +111,7 @@ reject(new Error('Request timed out. Check your connection and try again.'));
 <div class="max-w-2xl">
 <span class="inline-block bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm font-medium mb-4">100% Canadian Owned & Operated</span>
 <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Specialized Payroll & Bookkeeping Services for Startups & Tech Companies</h1>
-<p class="text-lg text-gray-700 mb-8">At FinCore, we understand the unique financial challenges of tech startups. Our specialized bookkeeping services help you manage burn rate, investor reporting, and R&D tax credits with fixed pricing and no surprise costs.</p>
+<p class="text-lg text-gray-700 mb-8">At FinBook, we understand the unique financial challenges of tech startups. Our specialized bookkeeping services help you manage burn rate, investor reporting, and R&D tax credits with fixed pricing and no surprise costs.</p>
 <div class="flex flex-col sm:flex-row gap-4">
 <a href="#contact" class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:opacity-90 transition-all text-center font-medium">Get Started Today</a>
 <a href="#pricing" class="border border-gray-300 bg-white text-gray-700 px-6 py-3 !rounded-button whitespace-nowrap hover:bg-gray-50 transition-all text-center font-medium">View Pricing</a>
@@ -608,7 +613,7 @@ reject(new Error('Request timed out. Check your connection and try again.'));
 <i class="ri-star-fill"></i>
 </div>
 </div>
-<p class="text-gray-700 italic">"FinCore has been instrumental in our growth from seed to Series A. Their understanding of SaaS metrics and investor reporting helped us secure funding and make data-driven decisions about our expansion strategy."</p>
+<p class="text-gray-700 italic">"FinBook has been instrumental in our growth from seed to Series A. Their understanding of SaaS metrics and investor reporting helped us secure funding and make data-driven decisions about our expansion strategy."</p>
 </div>
 <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
 <div class="flex items-center mb-4">
@@ -631,7 +636,7 @@ reject(new Error('Request timed out. Check your connection and try again.'));
 <i class="ri-star-fill"></i>
 </div>
 </div>
-<p class="text-gray-700 italic">"As a fintech founder, I needed bookkeepers who understand both finance and technology. FinCore exceeded my expectations with their expertise in subscription revenue models and their ability to create financial reports that impressed our investors."</p>
+<p class="text-gray-700 italic">"As a fintech founder, I needed bookkeepers who understand both finance and technology. FinBook exceeded my expectations with their expertise in subscription revenue models and their ability to create financial reports that impressed our investors."</p>
 </div>
 <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
 <div class="flex items-center mb-4">
@@ -654,7 +659,7 @@ reject(new Error('Request timed out. Check your connection and try again.'));
 <i class="ri-star-fill"></i>
 </div>
 </div>
-<p class="text-gray-700 italic">"FinCore helped us maximize our SR&ED tax credits, recovering over $200K that we reinvested in development. Their understanding of what qualifies as R&D from a tax perspective has been invaluable to our bottom line."</p>
+<p class="text-gray-700 italic">"FinBook helped us maximize our SR&ED tax credits, recovering over $200K that we reinvested in development. Their understanding of what qualifies as R&D from a tax perspective has been invaluable to our bottom line."</p>
 </div>
 </div>
 </div>
@@ -708,7 +713,7 @@ reject(new Error('Request timed out. Check your connection and try again.'));
 </div>
 </div>
 </div>
-<div class="fincore-contact-card bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+<div class="finbook-contact-card bg-white rounded-lg p-8 shadow-sm border border-gray-100">
 <form id="contactForm" novalidate onsubmit="return false;">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div>
@@ -847,7 +852,7 @@ reject(new Error('Request timed out. Check your connection and try again.'));
 <!-- Column 1: Company Info -->
 <div>
 <div class="mb-4">
-<span class="text-3xl font-['Pacifico'] text-white">FinCore</span>
+<span class="text-3xl font-['Pacifico'] text-white">FinBook</span>
 </div>
 <p class="text-gray-400 mb-6">Specialized bookkeeping services for Canadian tech startups and scale-ups. We understand the unique financial needs of high-growth technology companies.</p>
 <div class="flex space-x-2 mb-4">
@@ -919,8 +924,8 @@ reject(new Error('Request timed out. Check your connection and try again.'));
 <li><a href="#faq" class="text-gray-400 hover:text-white transition-all">FAQ</a></li>
 <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-all">Testimonials</a></li>
 <li><a href="#contact" class="text-gray-400 hover:text-white transition-all">Resources</a></li>
-<li><a href="FinCore-Terms-of-Service.html" class="text-gray-400 hover:text-white transition-all">Privacy Policy</a></li>
-<li><a href="FinCore-Terms-of-Service.html" class="text-gray-400 hover:text-white transition-all">Terms of Service</a></li>
+<li><a href="FinBook-Terms-of-Service.html" class="text-gray-400 hover:text-white transition-all">Privacy Policy</a></li>
+<li><a href="FinBook-Terms-of-Service.html" class="text-gray-400 hover:text-white transition-all">Terms of Service</a></li>
 <li><a href="#" class="text-gray-400 hover:text-white transition-all">Site Map</a></li>
 </ul>
 </div>
@@ -928,7 +933,7 @@ reject(new Error('Request timed out. Check your connection and try again.'));
 <!-- Bottom Bar -->
 <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
 <div class="mb-4 md:mb-0 text-gray-400 text-sm">
-© 2025 FinCore. All rights reserved. <span class="ml-2 bg-primary text-white px-2 py-0.5 rounded-full text-xs">Made in Canada</span>
+© 2025 FinBook. All rights reserved. <span class="ml-2 bg-primary text-white px-2 py-0.5 rounded-full text-xs">Made in Canada</span>
 </div>
 <div class="flex space-x-4">
 <div class="w-8 h-8 flex items-center justify-center text-gray-400">
@@ -1200,37 +1205,37 @@ const testimonials = [
 name: 'Alex Rivera',
 position: 'CEO, CloudStack Technologies',
 image: 'https://readdy.ai/api/search-image?query=professional headshot of a confident tech CEO with short dark hair, warm smile, modern tech office background slightly blurred, high quality professional portrait&width=100&height=100&seq=test1&orientation=squarish',
-quote: 'FinCore has been instrumental in our growth from seed to Series A. Their understanding of SaaS metrics and investor reporting helped us secure funding and make data-driven decisions about our expansion strategy.'
+quote: 'FinBook has been instrumental in our growth from seed to Series A. Their understanding of SaaS metrics and investor reporting helped us secure funding and make data-driven decisions about our expansion strategy.'
 },
 {
 name: 'Emily Zhang',
 position: 'Founder, FinTech Innovations',
 image: 'https://readdy.ai/api/search-image?query=professional headshot of an asian female tech entrepreneur with glasses, business casual attire, confident expression, clean modern background, high quality professional portrait&width=100&height=100&seq=test2&orientation=squarish',
-quote: 'As a fintech founder, I needed bookkeepers who understand both finance and technology. FinCore exceeded my expectations with their expertise in subscription revenue models and their ability to create financial reports that impressed our investors.'
+quote: 'As a fintech founder, I needed bookkeepers who understand both finance and technology. FinBook exceeded my expectations with their expertise in subscription revenue models and their ability to create financial reports that impressed our investors.'
 },
 {
 name: 'Jordan Taylor',
 position: 'CTO, DevOps Solutions',
 image: 'https://readdy.ai/api/search-image?query=professional headshot of a young tech CTO with casual tech company attire, friendly confident smile, tech office environment slightly blurred, high quality professional portrait&width=100&height=100&seq=test3&orientation=squarish',
-quote: 'FinCore helped us maximize our SR&ED tax credits, recovering over $200K that we reinvested in development. Their understanding of what qualifies as R&D from a tax perspective has been invaluable to our bottom line.'
+quote: 'FinBook helped us maximize our SR&ED tax credits, recovering over $200K that we reinvested in development. Their understanding of what qualifies as R&D from a tax perspective has been invaluable to our bottom line.'
 },
 {
 name: 'Sophia Patel',
 position: 'CFO, AI Analytics Platform',
 image: 'https://readdy.ai/api/search-image?query=professional headshot of an indian female CFO, professional business attire, confident expression, modern office background slightly blurred, high quality professional portrait&width=100&height=100&seq=test4&orientation=squarish',
-quote: 'When we were preparing for our Series B, FinCore organized our financials and created projections that withstood intense due diligence. Their expertise in startup accounting gave our investors confidence in our financial management.'
+quote: 'When we were preparing for our Series B, FinBook organized our financials and created projections that withstood intense due diligence. Their expertise in startup accounting gave our investors confidence in our financial management.'
 },
 {
 name: 'Marcus Johnson',
 position: 'Founder, EdTech Innovations',
 image: 'https://readdy.ai/api/search-image?query=professional headshot of a black male tech founder, smart casual attire, warm professional smile, modern tech office background, high quality professional portrait&width=100&height=100&seq=test5&orientation=squarish',
-quote: 'FinCore helped us transition from a service-based model to a SaaS model by implementing proper revenue recognition and metrics tracking. Their insights into our unit economics helped us optimize our pricing strategy.'
+quote: 'FinBook helped us transition from a service-based model to a SaaS model by implementing proper revenue recognition and metrics tracking. Their insights into our unit economics helped us optimize our pricing strategy.'
 },
 {
 name: 'Olivia Chen',
 position: 'COO, HealthTech Solutions',
 image: 'https://readdy.ai/api/search-image?query=professional headshot of an asian female COO, well-dressed in business attire, confident expression, healthcare tech environment slightly blurred in background, high quality professional portrait&width=100&height=100&seq=test6&orientation=squarish',
-quote: 'Managing burn rate was critical during our product development phase. FinCore provided weekly cash flow updates and runway projections that helped us make strategic decisions about hiring and expansion timing.'
+quote: 'Managing burn rate was critical during our product development phase. FinBook provided weekly cash flow updates and runway projections that helped us make strategic decisions about hiring and expansion timing.'
 }
 ];
 // Services are now hardcoded in the HTML
@@ -1354,7 +1359,7 @@ document.addEventListener('DOMContentLoaded', function() {
 try {
 setupStartupContactForm();
 } catch (contactErr) {
-console.error('FinCore contact form:', contactErr);
+console.error('FinBook contact form:', contactErr);
 }
 try {
 // Initialize all FAQ items to ensure they have the correct classes
@@ -1389,7 +1394,7 @@ setTimeout(() => {
 toggleFaq(0);
 }, 500);
 } catch (faqErr) {
-console.error('FinCore FAQ init:', faqErr);
+console.error('FinBook FAQ init:', faqErr);
 }
 });
 // Mobile menu toggle function
@@ -1456,8 +1461,8 @@ window.scrollToSectionAndCloseMobile = scrollToSectionAndCloseMobile;
 // Contact form — aligned with index.html (single submit handler, no input.focus() to avoid scroll jump)
 function setupStartupContactForm() {
 var form = document.getElementById('contactForm');
-if (!form || form.getAttribute('data-fincore-bound') === '1') return;
-form.setAttribute('data-fincore-bound', '1');
+if (!form || form.getAttribute('data-finbook-bound') === '1') return;
+form.setAttribute('data-finbook-bound', '1');
 function showError(fieldId, message) {
 var errorElement = document.getElementById(fieldId + 'Error');
 var inputElement = document.getElementById(fieldId);
@@ -1523,8 +1528,8 @@ var submitSucceeded = false;
 contactSubmitBtn.disabled = true;
 contactSubmitBtn.innerHTML = '<i class="ri-loader-4-line animate-spin mr-2"></i> Sending...';
 var fullName = firstName.value.trim() + ' ' + lastName.value.trim();
-fincoreWeb3formsSubmit({
-subject: 'New contact — FinCore (Startup & Tech)',
+finbookWeb3formsSubmit({
+subject: 'New contact — FinBook (Startup & Tech)',
 name: fullName,
 from_name: fullName,
 email: email.value.trim(),
@@ -1546,7 +1551,7 @@ var inp = document.getElementById(field);
 if (inp) inp.value = '';
 });
 setTimeout(function() {
-var formContainer = contactSubmitBtn.closest('.fincore-contact-card');
+var formContainer = contactSubmitBtn.closest('.finbook-contact-card');
 if (formContainer) {
 formContainer.innerHTML = '<div class="bg-green-50 border border-green-200 rounded-lg p-8 text-center"><div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"><i class="ri-check-line ri-2x text-green-500"></i></div><h3 class="text-xl font-semibold text-gray-900 mb-2">Thank You!</h3><p class="text-gray-600 mb-6">Your message has been sent successfully. One of our bookkeeping experts will contact you within 24 hours.</p><button type="button" onclick="resetContactForm()" class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:opacity-90 transition-all font-medium">Send Another Message</button></div>';
 }
@@ -1572,7 +1577,7 @@ btn.innerHTML = 'Send Message';
 });
 }
 window.resetContactForm = function() {
-var card = document.querySelector('.fincore-contact-card');
+var card = document.querySelector('.finbook-contact-card');
 if (!card) return;
 card.innerHTML = '<form id="contactForm" novalidate onsubmit="return false;"><div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"><div><label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name <span class="text-red-500">*</span></label><input type="text" id="firstName" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="John"><div id="firstNameError" class="text-red-500 text-sm mt-1 hidden"></div></div><div><label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name <span class="text-red-500">*</span></label><input type="text" id="lastName" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Smith"><div id="lastNameError" class="text-red-500 text-sm mt-1 hidden"></div></div></div><div class="mb-6"><label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address <span class="text-red-500">*</span></label><input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="john@example.com"><div id="emailError" class="text-red-500 text-sm mt-1 hidden"></div></div><div class="mb-6"><label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label><input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="(647) 555-1234"><div id="phoneError" class="text-red-500 text-sm mt-1 hidden"></div></div><div class="mb-6"><label for="business" class="block text-sm font-medium text-gray-700 mb-1">Business Name <span class="text-red-500">*</span></label><input type="text" id="business" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Your Business Name"><div id="businessError" class="text-red-500 text-sm mt-1 hidden"></div></div><div class="mb-6"><label for="message" class="block text-sm font-medium text-gray-700 mb-1">How can we help? <span class="text-red-500">*</span></label><textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Tell us about your bookkeeping needs..."></textarea><div id="messageError" class="text-red-500 text-sm mt-1 hidden"></div></div><button type="button" id="contactSubmitBtn" class="w-full bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:opacity-90 transition-all font-medium">Send Message</button><div id="formMessage" class="mt-4 text-center hidden"></div></form>';
 setupStartupContactForm();

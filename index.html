@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FinCore - Bookkeeping Services for Small Businesses</title>
+<title>FinBook - Bookkeeping Services for Small Businesses</title>
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
 <script>tailwind.config={theme:{extend:{colors:{primary:'#007a78',secondary:'#007a78'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,8 +26,13 @@ box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 
 </style>
 <script>
 window.WEB3FORMS_ACCESS_KEY = '44c9b9f1-8ee7-46fa-826a-ce81517ca96b';
-function fincoreWeb3formsSubmit(fields) {
-var payload = Object.assign({}, fields, { access_key: window.WEB3FORMS_ACCESS_KEY });
+function finbookWeb3formsSubmit(fields) {
+var senderEmail = fields.email || fields.replyto || '';
+var payload = Object.assign({}, fields, {
+access_key: window.WEB3FORMS_ACCESS_KEY,
+replyto: senderEmail,
+from_name: fields.from_name || fields.name || 'FinBook Website Visitor'
+});
 var req = fetch('https://api.web3forms.com/submit', {
 method: 'POST',
 headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -59,7 +64,7 @@ reject(new Error('Request timed out. Check your connection and try again.'));
 <header class="bg-white shadow-sm sticky top-0 z-50">
 <div class="container mx-auto px-4 py-3 flex justify-between items-center">
 <a href="index.html" data-readdy="true" class="flex items-center">
-<span class="text-3xl font-['Pacifico'] text-primary">FinCore</span>
+<span class="text-3xl font-['Pacifico'] text-primary">FinBook</span>
 </a>
 <nav class="hidden md:flex space-x-8">
 <a href="#services" class="text-gray-700 hover:text-primary font-medium">Services</a>
@@ -100,7 +105,7 @@ reject(new Error('Request timed out. Check your connection and try again.'));
 <div class="max-w-2xl">
 <span class="inline-block bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm font-medium mb-4">100% Canadian Owned & Operated</span>
 <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Fully Managed Bookkeeping & Payroll Services for Small Businesses</h1>
-<p class="text-lg text-gray-700 mb-8">At FinCore, we provide essential bookkeeping & payroll services with affordable fixed pricing and no surprise costs. Focus on growing your business while we handle your financial records with precision.</p>
+<p class="text-lg text-gray-700 mb-8">At FinBook, we provide essential bookkeeping & payroll services with affordable fixed pricing and no surprise costs. Focus on growing your business while we handle your financial records with precision.</p>
 <div class="flex flex-col sm:flex-row gap-4">
 <a href="#contact" class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:opacity-90 transition-all text-center font-medium">Get Started Today</a>
 <a href="#pricing" class="border border-gray-300 bg-white text-gray-700 px-6 py-3 !rounded-button whitespace-nowrap hover:bg-gray-50 transition-all text-center font-medium">View Pricing</a>
@@ -306,7 +311,7 @@ reject(new Error('Request timed out. Check your connection and try again.'));
 <div>
 <div class="mb-4">
 <a href="index.html" data-readdy="true">
-<span class="text-3xl font-['Pacifico'] text-white">FinCore</span>
+<span class="text-3xl font-['Pacifico'] text-white">FinBook</span>
 </a>
 </div>
 <p class="text-gray-400 mb-6">Affordable and hassle-free bookkeeping services for Canadian small businesses. 100% Canadian owned and operated.</p>
@@ -365,8 +370,8 @@ reject(new Error('Request timed out. Check your connection and try again.'));
 <li><a href="#faq" class="text-gray-400 hover:text-white transition-all">FAQ</a></li>
 <li><a href="#" class="text-gray-400 hover:text-white transition-all">Blog</a></li>
 <li><a href="#" class="text-gray-400 hover:text-white transition-all">Resources</a></li>
-<li><a href="FinCore-Terms-of-Service.html">Privacy Policy</a></li>
-<li><a href="FinCore-Terms-of-Service.html">Terms of Service</a></li>
+<li><a href="FinBook-Terms-of-Service.html">Privacy Policy</a></li>
+<li><a href="FinBook-Terms-of-Service.html">Terms of Service</a></li>
 <li><a href="#" class="text-gray-400 hover:text-white transition-all">Site Map</a></li>
 </ul>
 </div>
@@ -374,7 +379,7 @@ reject(new Error('Request timed out. Check your connection and try again.'));
 <!-- Bottom Bar -->
 <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
 <div class="mb-4 md:mb-0 text-gray-400 text-sm">
-© 2025 FinCore. All rights reserved. <span class="ml-2 bg-primary text-white px-2 py-0.5 rounded-full text-xs">Made in Canada</span>
+© 2025 FinBook. All rights reserved. <span class="ml-2 bg-primary text-white px-2 py-0.5 rounded-full text-xs">Made in Canada</span>
 </div>
 <div class="flex space-x-4">
 <div class="w-8 h-8 flex items-center justify-center text-gray-400">
@@ -535,7 +540,7 @@ question: 'What if I\'m behind on my bookkeeping?',
 answer: 'Our catch-up bookkeeping service is designed specifically for businesses that have fallen behind. We\'ll work efficiently to bring your books up to date, no matter how far behind you are.'
 },
 {
-question: 'Is my financial data secure with FinCore?',
+question: 'Is my financial data secure with FinBook?',
 answer: 'Absolutely. We use bank-level encryption and security protocols to protect your financial data. All our systems are regularly audited for security compliance, and we maintain strict confidentiality standards.'
 }
 ];
@@ -566,37 +571,37 @@ const testimonials = [
 name: 'Sarah Johnson',
 position: 'Owner, Bright Spark Electrical',
 image: 'https://public.readdy.ai/ai/img_res/21feff381b95b9b2bf3bb1d31e0dba6e.jpg',
-quote: 'FinCore transformed our bookkeeping process. Their team is responsive, detail-oriented, and has saved us countless hours each month. I can now focus on growing my business instead of worrying about the books.'
+quote: 'FinBook transformed our bookkeeping process. Their team is responsive, detail-oriented, and has saved us countless hours each month. I can now focus on growing my business instead of worrying about the books.'
 },
 {
 name: 'Michael Chen',
 position: 'Founder, TechNova Solutions',
 image: 'https://public.readdy.ai/ai/img_res/d8cb6a4d190d09bc95884da405a151d7.jpg',
-quote: 'As a startup founder, I needed reliable bookkeeping that could scale with my business. FinCore has been the perfect partner - they understand our unique needs and provide insights that have helped us make better financial decisions.'
+quote: 'As a startup founder, I needed reliable bookkeeping that could scale with my business. FinBook has been the perfect partner - they understand our unique needs and provide insights that have helped us make better financial decisions.'
 },
 {
 name: 'Olivia Rodriguez',
 position: 'Director, Gourmet Eats Restaurant',
 image: 'https://public.readdy.ai/ai/img_res/cc57d92f073c2be70bd757ba1c6747f2.jpg',
-quote: 'The restaurant industry has tight margins and complex bookkeeping needs. FinCore has been instrumental in helping us track our finances accurately, manage cash flow, and prepare for tax season without stress.'
+quote: 'The restaurant industry has tight margins and complex bookkeeping needs. FinBook has been instrumental in helping us track our finances accurately, manage cash flow, and prepare for tax season without stress.'
 },
 {
 name: 'David Thompson',
 position: 'CEO, BuildRight Construction',
 image: 'https://public.readdy.ai/ai/img_res/30d2a35258ff6c495c94f3b7fc9ef236.jpg',
-quote: 'Managing multiple projects with different timelines made our bookkeeping a nightmare. Since partnering with FinCore, we have clear financial visibility across all projects and have improved our profitability by 15%.'
+quote: 'Managing multiple projects with different timelines made our bookkeeping a nightmare. Since partnering with FinBook, we have clear financial visibility across all projects and have improved our profitability by 15%.'
 },
 {
 name: 'Jennifer Williams',
 position: 'Dentist, Bright Smile Dental',
 image: 'https://public.readdy.ai/ai/img_res/2b0e15c563dc377f539b3dd217dd1205.jpg',
-quote: 'FinCore understands the unique financial aspects of running a dental practice. Their attention to detail and proactive approach has helped us streamline our operations and focus more on patient care.'
+quote: 'FinBook understands the unique financial aspects of running a dental practice. Their attention to detail and proactive approach has helped us streamline our operations and focus more on patient care.'
 },
 {
 name: 'Robert Patel',
 position: 'Owner, Cornerstone Retail',
 image: 'https://public.readdy.ai/ai/img_res/7ebd243498bc8f1491bc6c13ad107771.jpg',
-quote: 'The seasonal nature of retail makes accurate bookkeeping essential. FinCore has helped us navigate busy periods with ease, providing timely financial reports that help us make inventory and staffing decisions with confidence.'
+quote: 'The seasonal nature of retail makes accurate bookkeeping essential. FinBook has helped us navigate busy periods with ease, providing timely financial reports that help us make inventory and staffing decisions with confidence.'
 }
 ];
 // Render services
@@ -796,8 +801,8 @@ var fullName = firstName.value.trim() + ' ' + lastName.value.trim();
 contactSubmitBtn.disabled = true;
 contactSubmitBtn.innerHTML = '<i class="ri-loader-4-line animate-spin mr-2"></i> Sending...';
 // Send form data via Web3Forms
-fincoreWeb3formsSubmit({
-subject: 'New contact — FinCore (main site)',
+finbookWeb3formsSubmit({
+subject: 'New contact — FinBook (main site)',
 name: fullName,
 from_name: fullName,
 email: email.value.trim(),
@@ -980,9 +985,10 @@ newContactSubmitBtn.disabled = true;
 newContactSubmitBtn.innerHTML = '<i class="ri-loader-4-line animate-spin mr-2"></i> Sending...';
 const formMessage = document.getElementById('formMessage');
 // Send form data via Web3Forms
-fincoreWeb3formsSubmit({
-subject: 'New contact — FinCore (main site)',
+finbookWeb3formsSubmit({
+subject: 'New contact — FinBook (main site)',
 name: firstName.value.trim() + ' ' + lastName.value.trim(),
+from_name: firstName.value.trim() + ' ' + lastName.value.trim(),
 email: email.value.trim(),
 phone: phone ? phone.value.trim() : '',
 business: business.value.trim(),
